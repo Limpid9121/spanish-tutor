@@ -2,6 +2,7 @@
 import { h, speakerIcon } from "../ui.js";
 import * as speech from "../speech.js";
 import { article, lenClass, posLabel, splitZh } from "../words.js";
+import { promptText } from "../practice.js";
 
 export function speakBtn(text, label = "播放發音") {
   const ok = speech.available();
@@ -21,7 +22,7 @@ export function spanishWord(word) {
 }
 
 export function chineseFront(word) {
-  return h("h1", { class: "word zh-front", lang: "zh-Hant" }, splitZh(word.zh).main);
+  return h("h1", { class: "word zh-front", lang: "zh-Hant" }, promptText(word)); // 不能直接印出西文答案（1.3 審核必修 2）
 }
 
 export function posLine(word) {

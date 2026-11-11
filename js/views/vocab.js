@@ -25,7 +25,9 @@ export async function renderVocab(root, ctx) {
     if (!rows.length) list.append(h("li", { class: "empty" }, "找不到。"));
   };
   search.addEventListener("input", draw);
-  root.append(h("h1", { class: "title" }, "單字"), search, list);
+  root.append(h("h1", { class: "title" }, "單字"),
+    h("a", { class: "gender-entry", href: "#/gender" }, h("span", {}, "陰陽性陷阱"), h("span", { class: "chev", "aria-hidden": "true" }, "›")),
+    search, list);
   draw();
 }
 

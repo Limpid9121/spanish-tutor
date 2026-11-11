@@ -5,6 +5,7 @@ import * as speech from "../speech.js";
 import { daysAgoText } from "../words.js";
 import { loadAppVersion } from "../version.js";
 import { sieveProgress, sieveStatus } from "../sieve.js";
+import { answerModeOf } from "../practice.js";
 
 // 新字來源的四個開關，順序固定（縮寫小詞包跟著「社群」）
 const SOURCE_ROWS = [
@@ -53,6 +54,10 @@ export async function renderSettings(root, ctx) {
   const sizes = [["s", "小"], ["m", "中"], ["l", "大"]];
   const seg = () => h("div", { class: "seg", role: "group", "aria-label": "字級" },
     sizes.map(([v, label]) => h("button", { type: "button", "aria-pressed": settings.fontSize === v ? "true" : "false", onclick: () => save({ fontSize: v }) }, label)));
+
+  // 作答方式（第 1.3 批）：每列兩個選項；選「翻面」就是原本的翻面自評
+  const modeSeg = (key, label, options) => h("div", { class: "seg", role: "group", "aria-label": label },
+    options.map(([v, text]) => h("button", { type: "button", "aria-pressed": answerModeOf(settings)[key] === v ? "true" : "false", onclick: () => save({ answerMode: { ...answerModeOf(settings), [key]: v } }) }, text)));
 
   const toggle = () => h("button", { class: "switch", type: "button", role: "switch", "aria-label": "反向卡", "aria-checked": settings.reverse ? "true" : "false", onclick: () => save({ reverse: !settings.reverse }) });
   const sourceSwitch = (key, label) => h("button", {
@@ -124,6 +129,11 @@ export async function renderSettings(root, ctx) {
         h("div", { class: "row" }, h("div", { class: "label" }, "反向卡", h("small", {}, "看中文，想西文")), toggle()),
         h("div", { class: "row" }, h("div", { class: "label" }, "字級"), seg()),
         voiceRow()),
+      h("div", { class: "group" },
+        h("p", { class: "group-title" }, "作答方式"),
+        h("div", { class: "row" }, h("div", { class: "label" }, "看中文的卡", h("small", {}, "要先開上面的反向卡才會出現")), modeSeg("r", "看中文的卡的作答方式", [["type", "打字"], ["flip", "翻面"]])),
+        h("div", { class: "row" }, h("div", { class: "label" }, "看西文的卡"), modeSeg("f", "看西文的卡的作答方式", [["choice", "選擇題"], ["flip", "翻面"]])),
+        h("p", { class: "note" }, "不管怎麼作答，翻面後都由你按四個鍵評分；打字或選擇題只會標出建議的那一個。")),
       h("div", { class: "group" },
         h("p", { class: "group-title" }, "新字來源"),
         SOURCE_ROWS.map(([key, label, hint]) => h("div", { class: "row" }, h("div", { class: "label" }, label, h("small", {}, hint)), sourceSwitch(key, label))),

@@ -165,12 +165,37 @@ a.btn, a.ghost { text-decoration: none; }
 .rv-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .rv-actions { padding: 12px 0 calc(env(safe-area-inset-bottom) + 16px); }
 .grades { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-.grade { min-height: calc(56px * var(--scale)); border-radius: 14px; border: 0; font-size: 1rem; letter-spacing: .06em; color: var(--text); }
+.grade { min-height: calc(56px * var(--scale)); border-radius: 14px; border: 0; font-size: 1rem; letter-spacing: .06em; color: var(--text); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; }
+.grade.suggested { box-shadow: inset 0 0 0 2px var(--accent); } /* 建議的那一個：低調的外框，按哪個都照他按的評分 */
+.grade .sug { font-size: .6875rem; color: var(--text-2); letter-spacing: .04em; line-height: 1.2; }
 .grade[data-g="1"] { background: var(--tint-again); }
 .grade[data-g="2"] { background: var(--tint-hard); }
 .grade[data-g="3"] { background: var(--tint-good); }
 .grade[data-g="4"] { background: var(--tint-easy); }
 .grade:active { transform: scale(.97); }
+
+/* 作答方式（第 1.3 批）：打字、選擇題 */
+.review.typing { position: fixed; top: 0; left: 0; right: 0; width: 100%; margin: 0 auto; } /* 高度與位置由 visualViewport 設定，鍵盤彈出時才不會蓋住輸入框 */
+.type-form { display: grid; gap: 8px; }
+.type-input { width: 100%; min-height: 52px; padding: 0 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); font-size: max(16px, 1rem); -webkit-appearance: none; appearance: none; }
+.type-input::placeholder { color: var(--text-2); opacity: .8; }
+.accent-keys { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.accent-keys button { min-height: 44px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); font-family: var(--serif); font-size: 1.125rem; }
+.accent-keys button:active { transform: scale(.97); }
+.verdict { margin: 0 0 22px; }
+.verdict .v-title { font-weight: 600; font-size: 1.0625rem; letter-spacing: .04em; margin: 0; }
+.verdict.ok .v-title { color: var(--accent); }
+.verdict .v-line { color: var(--text-2); font-size: .9375rem; margin: 4px 0 0; overflow-wrap: anywhere; }
+.verdict .v-line [lang="es"] { font-family: var(--serif); font-size: 1.0625rem; color: var(--text); }
+mark.acc { background: var(--tint-hard); color: inherit; border-radius: 4px; padding: 0 .08em; }
+.choices { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 28px; }
+.choice { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 52px; padding: 10px 16px; text-align: left; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-size: 1.0625rem; line-height: 1.4; overflow-wrap: anywhere; }
+.choice:disabled { cursor: default; color: var(--text); }
+.choice:not(:disabled):active { transform: scale(.985); }
+.choice.ok { background: var(--tint-good); border-color: var(--accent); }
+.choice.bad { background: var(--tint-again); border-color: var(--text-2); }
+.choices.answered .choice:not(.ok):not(.bad) { opacity: .55; }
+.choice .mk { flex: none; font-size: 1rem; }
 .done { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; padding-bottom: 12dvh; }
 .done p { font-size: 1.25rem; margin: 0; }
 
@@ -235,3 +260,31 @@ button.row, a.row { width: 100%; background: none; border-left: 0; border-right:
 #toast.show { opacity: .95; transform: translate(-50%, 0); }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+.dont-know { width: 100%; }
+
+/* 陰陽性陷阱（第 1.4 批） */
+.gender-entry { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 16px; margin-bottom: 12px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--text); text-decoration: none; font-size: 1rem; }
+.gender-entry span:first-child { flex: 1; }
+.gender-entry .chev { color: var(--text-2); font-size: 1.25rem; line-height: 1; }
+.g-group { margin: 32px 0 0; }
+.g-title { font-size: 1.0625rem; font-weight: 600; letter-spacing: .02em; margin: 0 0 6px; }
+.g-rule { color: var(--text-2); font-size: .9375rem; line-height: 1.7; margin: 0 0 8px; overflow-wrap: anywhere; }
+.g-row { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.g-row .es { font-family: var(--serif); font-size: 1.25rem; flex: 0 0 auto; max-width: 42%; overflow-wrap: anywhere; }
+.g-row .zh { color: var(--text-2); font-size: .9375rem; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gart { flex: none; min-width: 2.6em; padding: 3px 8px; border-radius: 8px; text-align: center; font-family: var(--serif); font-size: 1rem; color: var(--text); } /* el、la 兩種低彩度色調（沿用評分鍵的底色，深色模式有對應色） */
+.gart.el { background: var(--tint-easy); }
+.gart.la { background: var(--tint-again); }
+.g-prog { color: var(--text-2); font-size: .875rem; font-variant-numeric: tabular-nums; margin: 0 0 20px; }
+.g-head { margin-top: 8px; }
+.gdrill .meaning { font-size: 1.375rem; line-height: 1.5; margin: 8px 0 0; }
+.art-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 32px 0 24px; }
+.art-btn { min-height: 72px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-family: var(--serif); font-size: 1.75rem; letter-spacing: .02em; }
+.art-btn:not(:disabled):active { transform: scale(.985); }
+.art-btn:disabled { cursor: default; color: var(--text); }
+.art-btn.ok { background: var(--tint-good); border-color: var(--accent); }
+.art-btn.bad { background: var(--tint-again); border-color: var(--text-2); }
+.art-btns:has(:disabled) .art-btn:not(.ok):not(.bad) { opacity: .55; }
+.verdict.bad .v-title { color: var(--text); }
+.g-next { margin-top: 8px; }
+.gdrill .done { min-height: 50dvh; justify-content: center; }

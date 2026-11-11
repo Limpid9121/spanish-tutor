@@ -14,3 +14,15 @@ export async function loadVocab() {
   }
   return cache;
 }
+
+// 陰陽性陷阱（第 1.4 批）：{ groups, words, byId }。跟單字表分開載入，只有專區用到。
+let genderCache;
+export async function loadGenderTraps() {
+  if (!genderCache) {
+    const res = await fetch("content/gender-traps.json");
+    if (!res.ok) throw new Error(`讀不到 content/gender-traps.json（${res.status}）`);
+    const d = await res.json();
+    genderCache = { groups: d.groups, words: d.words, byId: new Map(d.words.map((w) => [w.id, w])) };
+  }
+  return genderCache;
+}

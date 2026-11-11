@@ -24,6 +24,7 @@
 - 「課本詞表」那一層（約 240 個字）依 [ELELex](https://cental.uclouvain.be/cefrlex/elelex/)（西班牙語外語教材的詞頻表，依 CEFR 等級統計）的 A1、A2 詞頻排序。
 - 授權：[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)。**不能商用**：這個 App 只能自己學習用，不能販售或放進收費服務；改作後的成果也要用相同授權分享。
 - 用途：只用來挑選與排序單字，App 內不附帶原始檔。
+- 「陰陽性陷阱」專區的名詞性別，也用 ELELex 的詞性標記（NCM／NCF／NCC）與 Tatoeba 句子裡的冠詞次數交叉查證；查證用的數字留在建置端，不發布。
 
 ## wordfreq 社群常用字
 

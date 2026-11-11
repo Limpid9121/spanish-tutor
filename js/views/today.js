@@ -1,5 +1,5 @@
 import { h } from "../ui.js";
-import { buildToday } from "../session.js";
+import { buildToday, wordCards } from "../session.js";
 import { dayKey } from "../srs.js";
 import { cardState } from "../words.js";
 import { shouldOfferSieve } from "../sieve.js";
@@ -8,7 +8,7 @@ export async function renderToday(root, ctx) {
   const { store, vocab } = ctx;
   const now = new Date();
   const [cards, settings, introduced] = await Promise.all([store.cards(), store.settings(), store.newCount(dayKey(now))]);
-  if (shouldOfferSieve(settings, cards.size)) { location.replace("#/sieve"); return; } // 第一次使用：先快速篩字
+  if (shouldOfferSieve(settings, wordCards(cards).length)) { location.replace("#/sieve"); return; } // 第一次使用：先快速篩字
   const t = buildToday({ vocab, cards, settings, now, introducedToday: introduced });
   const learned = vocab.filter((w) => cards.has(`${w.id}:f`)).length;
   const known = vocab.filter((w) => cardState(cards.get(`${w.id}:f`)) === "known").length;
@@ -19,7 +19,7 @@ export async function renderToday(root, ctx) {
     : h("p", { class: "today-line" },
         t.due.length > 0 ? ["要複習 ", h("b", {}, t.due.length), " 張"] : null,
         t.due.length > 0 && t.fresh.length > 0 ? "，" : null,
-        t.fresh.length > 0 ? [t.due.length > 0 ? "新字 " : "今天有新字 ", h("b", {}, t.fresh.length), " 個"] : null,
+        t.fresh.length > 0 ? [t.due.length > 0 ? "新卡 " : "今天有新卡 ", h("b", {}, t.fresh.length), " 張"] : null, // 新卡含反向卡（1.3 審核建議：不是全都是新字）
         "。");
 
   root.append(

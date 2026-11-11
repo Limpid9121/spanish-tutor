@@ -5,7 +5,7 @@ const POS_ZH = {
 };
 const GENDER_ZH = { m: "陽性", f: "陰性" };
 // 陰性名詞但單數用 el（重音落在開頭的 a）：el agua、el arma、el hambre
-const EL_FEMININE = new Set(["agua", "arma", "hambre", "águila", "alma", "área", "aula", "hacha", "ala"]);
+export const EL_FEMININE = new Set(["agua", "arma", "hambre", "águila", "alma", "área", "aula", "hacha", "ala"]);
 
 export function article(word) {
   if (word.pos !== "n" || !word.gender) return null;
