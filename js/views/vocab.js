@@ -53,7 +53,7 @@ export async function renderWord(root, ctx, id) {
     posLine(w),
     h("div", { class: "rv-head" }, spanishWord(w), speakBtn(w.es)),
     h("div", { class: "answer" }, meaningBlock(w), exampleBlock(w)),
-    h("div", { class: "row fam-row" }, h("div", { class: "label" }, "已熟悉", h("small", {}, "打開後不再出現在新字裡")), sw),
+    h("div", { class: "row fam-row" }, h("div", { class: "label" }, "已熟悉", h("small", {}, "打開後不再出現在新字和複習裡")), sw),
     h("p", { class: "muted small", style: "margin-top:32px" }, status),
   );
 }

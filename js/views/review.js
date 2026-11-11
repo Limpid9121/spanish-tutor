@@ -37,7 +37,12 @@ export async function renderReview(root, ctx) {
     const back = h("div", { class: "answer" },
       rev ? h("div", { class: "rv-head" }, spanishWord(w), speakBtn(w.es)) : meaningBlock(w),
       rev ? h("div", { style: "margin-top:12px" }, meaningBlock(w)) : null,
-      exampleBlock(w));
+      exampleBlock(w),
+      // 回報鍵：放在例句下方靠右（他 2026-11-11 選 A：原本在頂排的灰色小字他找不到），離底下的評分鍵遠，不會誤按
+      h("div", { class: "report-row" }, h("button", {
+        class: `report${reported.has(item.id) ? " sent" : ""}`, type: "button", "aria-label": "回報這張卡有問題",
+        onclick: (e) => { e.stopPropagation(); openReport({ store, word: w, item, onSaved: () => { reported.add(item.id); draw(); } }); },
+      }, reported.has(item.id) ? "已回報" : "回報問題")));
 
     const actions = flipped
       ? h("div", { class: "grades" }, GRADES.map((g) => h("button", { class: "grade", type: "button", "data-g": g.value, onclick: () => grade(g.value) }, g.label)))
@@ -46,11 +51,6 @@ export async function renderReview(root, ctx) {
     wrap.replaceChildren(
       h("div", { class: "rv-top" },
         h("a", { class: "ghost", href: "#/today", style: "display:inline-flex;align-items:center" }, "結束"),
-        // 回報鍵：翻面之後才出現，放在最上面一排，不跟底下的評分鍵搶位置
-        flipped ? h("button", {
-          class: `report${reported.has(item.id) ? " sent" : ""}`, type: "button", "aria-label": "回報這張卡有問題",
-          onclick: () => openReport({ store, word: w, item, onSaved: () => { reported.add(item.id); draw(); } }),
-        }, reported.has(item.id) ? "已回報" : "回報") : null,
         h("span", { class: "prog" }, `剩 ${queue.length}`)),
       h("div", { class: "rv-card", onclick: () => { if (!flipped) flip(); } }, front, flipped ? back : null),
       h("div", { class: "rv-actions" }, actions));

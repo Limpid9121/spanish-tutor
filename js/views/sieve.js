@@ -36,7 +36,7 @@ export async function renderSieve(root, ctx) {
     const nx = sieveNext(vocab, settings, cards);
     if (!nx && viewId === null) { leaveFinished(); return; }
     const word = viewId !== null ? vocab.find((w) => w.id === viewId) : nx.word;
-    const pos = viewId !== null ? sieveIndex(vocab, settings, cards, word.id) : { index: nx.done + 1, total: nx.total };
+    const pos = sieveIndex(vocab, settings, cards, word.id); // 一律用「排第幾」，重跑篩字後才不會跟「上一個」的算法對不起來（1.1c 複審建議 2）
     const prev = sievePrev(vocab, settings, cards, word.id);
     const n = { word };
     const card = h("div", { class: "sv-card" },

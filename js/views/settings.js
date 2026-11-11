@@ -132,7 +132,7 @@ export async function renderSettings(root, ctx) {
         h("a", { class: "row", href: "#/sieve" }, h("span", { class: "label" }, "快速篩字", h("small", {}, "把你已經會的字挑出來，不再出現在新字裡")), h("span", { class: "muted small" }, sieveText)),
         h("button", { class: "row", type: "button", onclick: onExport }, h("span", { class: "label" }, "匯出備份"), h("span", { class: "muted small" }, `上次：${daysAgoText(lastBackup)}`)),
         h("button", { class: "row", type: "button", onclick: () => fileInput.click() }, h("span", { class: "label" }, "匯入備份")),
-        h("div", { class: "row" }, h("span", { class: "label" }, "回報的卡片", h("small", {}, "卡片翻面後按「回報」；會跟著備份一起存")), h("span", { class: "muted small" }, `已回報 ${reportCount} 個`)),
+        h("div", { class: "row" }, h("span", { class: "label" }, "回報的卡片", h("small", {}, "卡片翻面後，按例句下方的「回報問題」；會跟著備份一起存")), h("span", { class: "muted small" }, `已回報 ${reportCount} 個`)),
         fileInput,
         h("p", { class: "note" }, persisted ? "進度只存在這支手機，瀏覽器已承諾不自動清除。換手機前記得先匯出。" : "進度只存在這支手機，瀏覽器沒有承諾一直保留。請定期匯出備份。")),
       h("div", { class: "group" },
