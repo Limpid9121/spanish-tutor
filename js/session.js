@@ -14,7 +14,7 @@ export const INSERT_EVERY = 8; // 每 8 個新字穿插 1 個口語、新聞或�
 
 // 單字卡（不含陰陽性陷阱專區的 dir "g" 卡）。今日頁、篩字、「是不是第一次使用」都只看這些。
 export function wordCards(cards) {
-  return [...cards.values()].filter((r) => r.dir !== "g");
+  return [...cards.values()].filter((r) => r.dir === "f" || r.dir === "r"); // 只收單字卡（1.4 審核 B2：之後還有動詞卡 v）
 }
 
 export function sourceOf(word) {

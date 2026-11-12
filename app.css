@@ -288,3 +288,17 @@ button.row, a.row { width: 100%; background: none; border-left: 0; border-right:
 .verdict.bad .v-title { color: var(--text); }
 .g-next { margin-top: 8px; }
 .gdrill .done { min-height: 50dvh; justify-content: center; }
+
+/* 動詞變化表（第 2a 批）：不規則格用低彩度底色（沿用評分鍵的底色變數，深色模式有對應色），變的字母加底線 */
+.v-intro { margin: -12px 0 8px; }
+.v-sub { margin: 28px 0 4px; }
+.v-zh { font-size: 1.375rem; line-height: 1.5; margin: 8px 0 0; }
+.vtable { margin: 0; }
+.vrow { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 4px 0; border-bottom: 1px solid var(--line); }
+.vp { flex: 0 0 6.4em; color: var(--text-2); font-size: .8125rem; letter-spacing: .02em; line-height: 1.3; overflow-wrap: anywhere; }
+.vf { flex: 1; min-width: 0; font-family: var(--serif); font-size: 1.25rem; line-height: 1.4; overflow-wrap: anywhere; padding: 3px 8px; margin-left: -8px; border-radius: 8px; }
+.vf.irr { background: var(--tint-hard); }
+.vf u { text-decoration: underline; text-decoration-skip-ink: none; -webkit-text-decoration-skip: none; text-decoration-thickness: 2px; text-underline-offset: .38em; text-decoration-color: color-mix(in srgb, var(--text) 55%, transparent); } /* 底線放在 g、y 的下伸部下面，才看得出來（2a 審核必修 1） */
+.vpron { color: var(--text-2); }
+.vrow.dim .vp, .vrow.dim .vf { opacity: .55; }
+.v-src { margin-top: 24px; }

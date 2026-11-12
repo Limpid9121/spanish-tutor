@@ -26,3 +26,15 @@ export async function loadGenderTraps() {
   }
   return genderCache;
 }
+
+// 動詞變化（第 2a 批）：{ tenses, groups, verbs, byId }。只有「動詞」分頁用到，跟單字表分開載入。
+let verbCache;
+export async function loadVerbs() {
+  if (!verbCache) {
+    const res = await fetch("content/verbs.json");
+    if (!res.ok) throw new Error(`讀不到 content/verbs.json（${res.status}）`);
+    const d = await res.json();
+    verbCache = { ...d, byId: new Map(d.verbs.map((v) => [v.id, v])) };
+  }
+  return verbCache;
+}

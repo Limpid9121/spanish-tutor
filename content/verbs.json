@@ -1,0 +1,1977 @@
+{
+ "tenses": [
+  "pres",
+  "ger"
+ ],
+ "groups": [
+  {
+   "id": "reg-ar",
+   "title": "規則 -ar 動詞",
+   "rule": "去掉 -ar，依人稱加 -o、-as、-a、-amos、-áis、-an。例：hablar → hablo、hablas、habla。",
+   "src": "ai"
+  },
+  {
+   "id": "reg-er",
+   "title": "規則 -er 動詞",
+   "rule": "去掉 -er，依人稱加 -o、-es、-e、-emos、-éis、-en。例：comer → como、comes、come。",
+   "src": "ai"
+  },
+  {
+   "id": "reg-ir",
+   "title": "規則 -ir 動詞",
+   "rule": "跟 -er 幾乎一樣，只有 nosotros、vosotros 是 -imos、-ís。例：vivir → vivo、vivimos、vivís。",
+   "src": "ai"
+  },
+  {
+   "id": "e-ie",
+   "title": "詞根 e 變 ie",
+   "rule": "詞根裡的 e 變成 ie，只有 nosotros、vosotros 不變。例：pensar → pienso、piensas、piensa、pensamos。",
+   "src": "ai"
+  },
+  {
+   "id": "o-ue",
+   "title": "詞根 o 變 ue",
+   "rule": "詞根裡的 o 變成 ue，只有 nosotros、vosotros 不變。例：poder → puedo、puedes、puede、podemos。",
+   "src": "ai"
+  },
+  {
+   "id": "u-ue",
+   "title": "詞根 u 變 ue",
+   "rule": "這份清單裡只有 jugar：u 變成 ue，nosotros、vosotros 不變。例：juego、juegas、juega、jugamos。",
+   "src": "ai"
+  },
+  {
+   "id": "e-i",
+   "title": "詞根 e 變 i",
+   "rule": "全是 -ir 動詞：詞根裡的 e 變成 i，nosotros、vosotros 不變。例：pedir → pido、pides、pide、pedimos。",
+   "src": "ai"
+  },
+  {
+   "id": "yo-go",
+   "title": "yo 加 g（-go）",
+   "rule": "yo 的形以 -go 結尾：pongo、salgo 是多一個 g；hago、digo 是 c 換成 g；traigo、oigo 是多了 ig。tener、venir、decir 的其他人稱還有詞根變化；oír 變化最多。",
+   "src": "ai"
+  },
+  {
+   "id": "yo-zco",
+   "title": "yo 變 -zco",
+   "rule": "conocer 這類 -ocer、-ecer 結尾的動詞，yo 變成 -zco：conozco；其他人稱照規則。hacer 不算（它是 hago）。",
+   "src": "ai"
+  },
+  {
+   "id": "yo-other",
+   "title": "yo 的形特別",
+   "rule": "yo 的形不照規則、也不是加 g：sé、veo、doy。其他人稱大多照規則。",
+   "src": "ai"
+  },
+  {
+   "id": "irregular",
+   "title": "完全不規則",
+   "rule": "ser、estar、ir 不照任何一組的規則，整張表直接背起來（表上整格標色，不標個別字母）。",
+   "src": "ai"
+  }
+ ],
+ "verbs": [
+  {
+   "id": "vb-hablar",
+   "inf": "hablar",
+   "zh": "說話、講（某種語言）",
+   "src": "ai",
+   "unit": "u06",
+   "group": "reg-ar",
+   "reflexive": false,
+   "pres": [
+    "hablo",
+    "hablas",
+    "habla",
+    "hablamos",
+    "habláis",
+    "hablan"
+   ],
+   "ger": "hablando",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "hablo",
+     "hablas",
+     "habla",
+     "hablamos",
+     "habláis",
+     "hablan"
+    ],
+    "ger": "hablando"
+   }
+  },
+  {
+   "id": "vb-trabajar",
+   "inf": "trabajar",
+   "zh": "工作",
+   "src": "ai",
+   "unit": "u06",
+   "group": "reg-ar",
+   "reflexive": false,
+   "pres": [
+    "trabajo",
+    "trabajas",
+    "trabaja",
+    "trabajamos",
+    "trabajáis",
+    "trabajan"
+   ],
+   "ger": "trabajando",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "trabajo",
+     "trabajas",
+     "trabaja",
+     "trabajamos",
+     "trabajáis",
+     "trabajan"
+    ],
+    "ger": "trabajando"
+   }
+  },
+  {
+   "id": "vb-estudiar",
+   "inf": "estudiar",
+   "zh": "讀書、學習；estudio español＝我學西班牙語",
+   "src": "ai",
+   "unit": "u06",
+   "group": "reg-ar",
+   "reflexive": false,
+   "pres": [
+    "estudio",
+    "estudias",
+    "estudia",
+    "estudiamos",
+    "estudiáis",
+    "estudian"
+   ],
+   "ger": "estudiando",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "estudio",
+     "estudias",
+     "estudia",
+     "estudiamos",
+     "estudiáis",
+     "estudian"
+    ],
+    "ger": "estudiando"
+   }
+  },
+  {
+   "id": "vb-escuchar",
+   "inf": "escuchar",
+   "zh": "聽（專心聽）；escucha＝聽好",
+   "src": "ai",
+   "unit": "u06",
+   "group": "reg-ar",
+   "reflexive": false,
+   "pres": [
+    "escucho",
+    "escuchas",
+    "escucha",
+    "escuchamos",
+    "escucháis",
+    "escuchan"
+   ],
+   "ger": "escuchando",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "escucho",
+     "escuchas",
+     "escucha",
+     "escuchamos",
+     "escucháis",
+     "escuchan"
+    ],
+    "ger": "escuchando"
+   }
+  },
+  {
+   "id": "vb-comprar",
+   "inf": "comprar",
+   "zh": "買",
+   "src": "ai",
+   "unit": "u06",
+   "group": "reg-ar",
+   "reflexive": false,
+   "pres": [
+    "compro",
+    "compras",
+    "compra",
+    "compramos",
+    "compráis",
+    "compran"
+   ],
+   "ger": "comprando",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "compro",
+     "compras",
+     "compra",
+     "compramos",
+     "compráis",
+     "compran"
+    ],
+    "ger": "comprando"
+   }
+  },
+  {
+   "id": "vb-tomar",
+   "inf": "tomar",
+   "zh": "拿；喝；搭乘（tomar el autobús）",
+   "src": "ai",
+   "unit": "u06",
+   "group": "reg-ar",
+   "reflexive": false,
+   "pres": [
+    "tomo",
+    "tomas",
+    "toma",
+    "tomamos",
+    "tomáis",
+    "toman"
+   ],
+   "ger": "tomando",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "tomo",
+     "tomas",
+     "toma",
+     "tomamos",
+     "tomáis",
+     "toman"
+    ],
+    "ger": "tomando"
+   }
+  },
+  {
+   "id": "vb-llamar",
+   "inf": "llamar",
+   "zh": "打電話給；呼叫；llamarse＝名叫（me llamo Ana）",
+   "src": "ai",
+   "unit": "u06",
+   "group": "reg-ar",
+   "reflexive": false,
+   "pres": [
+    "llamo",
+    "llamas",
+    "llama",
+    "llamamos",
+    "llamáis",
+    "llaman"
+   ],
+   "ger": "llamando",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "llamo",
+     "llamas",
+     "llama",
+     "llamamos",
+     "llamáis",
+     "llaman"
+    ],
+    "ger": "llamando"
+   }
+  },
+  {
+   "id": "vb-llegar",
+   "inf": "llegar",
+   "zh": "到達；llegar a＝抵達",
+   "src": "ai",
+   "unit": "u06",
+   "group": "reg-ar",
+   "reflexive": false,
+   "pres": [
+    "llego",
+    "llegas",
+    "llega",
+    "llegamos",
+    "llegáis",
+    "llegan"
+   ],
+   "ger": "llegando",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "llego",
+     "llegas",
+     "llega",
+     "llegamos",
+     "llegáis",
+     "llegan"
+    ],
+    "ger": "llegando"
+   }
+  },
+  {
+   "id": "vb-comer",
+   "inf": "comer",
+   "zh": "吃；吃飯",
+   "src": "ai",
+   "unit": "u07",
+   "group": "reg-er",
+   "reflexive": false,
+   "pres": [
+    "como",
+    "comes",
+    "come",
+    "comemos",
+    "coméis",
+    "comen"
+   ],
+   "ger": "comiendo",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "como",
+     "comes",
+     "come",
+     "comemos",
+     "coméis",
+     "comen"
+    ],
+    "ger": "comiendo"
+   }
+  },
+  {
+   "id": "vb-beber",
+   "inf": "beber",
+   "zh": "喝",
+   "src": "ai",
+   "unit": "u07",
+   "group": "reg-er",
+   "reflexive": false,
+   "pres": [
+    "bebo",
+    "bebes",
+    "bebe",
+    "bebemos",
+    "bebéis",
+    "beben"
+   ],
+   "ger": "bebiendo",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "bebo",
+     "bebes",
+     "bebe",
+     "bebemos",
+     "bebéis",
+     "beben"
+    ],
+    "ger": "bebiendo"
+   }
+  },
+  {
+   "id": "vb-aprender",
+   "inf": "aprender",
+   "zh": "學習、學會；aprender a＋原形＝學著做",
+   "src": "ai",
+   "unit": "u07",
+   "group": "reg-er",
+   "reflexive": false,
+   "pres": [
+    "aprendo",
+    "aprendes",
+    "aprende",
+    "aprendemos",
+    "aprendéis",
+    "aprenden"
+   ],
+   "ger": "aprendiendo",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "aprendo",
+     "aprendes",
+     "aprende",
+     "aprendemos",
+     "aprendéis",
+     "aprenden"
+    ],
+    "ger": "aprendiendo"
+   }
+  },
+  {
+   "id": "vb-leer",
+   "inf": "leer",
+   "zh": "閱讀",
+   "src": "ai",
+   "unit": "u07",
+   "group": "reg-er",
+   "reflexive": false,
+   "pres": [
+    "leo",
+    "lees",
+    "lee",
+    "leemos",
+    "leéis",
+    "leen"
+   ],
+   "ger": "leyendo",
+   "irregularForms": [],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "leo",
+     "lees",
+     "lee",
+     "leemos",
+     "leéis",
+     "leen"
+    ],
+    "ger": "leiendo"
+   }
+  },
+  {
+   "id": "vb-correr",
+   "inf": "correr",
+   "zh": "跑、跑步",
+   "src": "ai",
+   "unit": "u07",
+   "group": "reg-er",
+   "reflexive": false,
+   "pres": [
+    "corro",
+    "corres",
+    "corre",
+    "corremos",
+    "corréis",
+    "corren"
+   ],
+   "ger": "corriendo",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "corro",
+     "corres",
+     "corre",
+     "corremos",
+     "corréis",
+     "corren"
+    ],
+    "ger": "corriendo"
+   }
+  },
+  {
+   "id": "vb-vivir",
+   "inf": "vivir",
+   "zh": "居住；活著",
+   "src": "ai",
+   "unit": "u07",
+   "group": "reg-ir",
+   "reflexive": false,
+   "pres": [
+    "vivo",
+    "vives",
+    "vive",
+    "vivimos",
+    "vivís",
+    "viven"
+   ],
+   "ger": "viviendo",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "vivo",
+     "vives",
+     "vive",
+     "vivimos",
+     "vivís",
+     "viven"
+    ],
+    "ger": "viviendo"
+   }
+  },
+  {
+   "id": "vb-escribir",
+   "inf": "escribir",
+   "zh": "寫",
+   "src": "ai",
+   "unit": "u07",
+   "group": "reg-ir",
+   "reflexive": false,
+   "pres": [
+    "escribo",
+    "escribes",
+    "escribe",
+    "escribimos",
+    "escribís",
+    "escriben"
+   ],
+   "ger": "escribiendo",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "escribo",
+     "escribes",
+     "escribe",
+     "escribimos",
+     "escribís",
+     "escriben"
+    ],
+    "ger": "escribiendo"
+   }
+  },
+  {
+   "id": "vb-abrir",
+   "inf": "abrir",
+   "zh": "打開",
+   "src": "ai",
+   "unit": "u07",
+   "group": "reg-ir",
+   "reflexive": false,
+   "pres": [
+    "abro",
+    "abres",
+    "abre",
+    "abrimos",
+    "abrís",
+    "abren"
+   ],
+   "ger": "abriendo",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "abro",
+     "abres",
+     "abre",
+     "abrimos",
+     "abrís",
+     "abren"
+    ],
+    "ger": "abriendo"
+   }
+  },
+  {
+   "id": "vb-recibir",
+   "inf": "recibir",
+   "zh": "收到、接受",
+   "src": "ai",
+   "unit": "u07",
+   "group": "reg-ir",
+   "reflexive": false,
+   "pres": [
+    "recibo",
+    "recibes",
+    "recibe",
+    "recibimos",
+    "recibís",
+    "reciben"
+   ],
+   "ger": "recibiendo",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "recibo",
+     "recibes",
+     "recibe",
+     "recibimos",
+     "recibís",
+     "reciben"
+    ],
+    "ger": "recibiendo"
+   }
+  },
+  {
+   "id": "vb-subir",
+   "inf": "subir",
+   "zh": "上去、爬上、上升",
+   "src": "ai",
+   "unit": "u07",
+   "group": "reg-ir",
+   "reflexive": false,
+   "pres": [
+    "subo",
+    "subes",
+    "sube",
+    "subimos",
+    "subís",
+    "suben"
+   ],
+   "ger": "subiendo",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "subo",
+     "subes",
+     "sube",
+     "subimos",
+     "subís",
+     "suben"
+    ],
+    "ger": "subiendo"
+   }
+  },
+  {
+   "id": "vb-pensar",
+   "inf": "pensar",
+   "zh": "想、思考；pensar en＝想到；pienso que＝我認為",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-ie",
+   "reflexive": false,
+   "pres": [
+    "pienso",
+    "piensas",
+    "piensa",
+    "pensamos",
+    "pensáis",
+    "piensan"
+   ],
+   "ger": "pensando",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "penso",
+     "pensas",
+     "pensa",
+     "pensamos",
+     "pensáis",
+     "pensan"
+    ],
+    "ger": "pensando"
+   }
+  },
+  {
+   "id": "vb-querer",
+   "inf": "querer",
+   "zh": "想要；愛（對人）",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-ie",
+   "reflexive": false,
+   "pres": [
+    "quiero",
+    "quieres",
+    "quiere",
+    "queremos",
+    "queréis",
+    "quieren"
+   ],
+   "ger": "queriendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "quero",
+     "queres",
+     "quere",
+     "queremos",
+     "queréis",
+     "queren"
+    ],
+    "ger": "queriendo"
+   }
+  },
+  {
+   "id": "vb-empezar",
+   "inf": "empezar",
+   "zh": "開始；empezar a＋原形",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-ie",
+   "reflexive": false,
+   "pres": [
+    "empiezo",
+    "empiezas",
+    "empieza",
+    "empezamos",
+    "empezáis",
+    "empiezan"
+   ],
+   "ger": "empezando",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "empezo",
+     "empezas",
+     "empeza",
+     "empezamos",
+     "empezáis",
+     "empezan"
+    ],
+    "ger": "empezando"
+   }
+  },
+  {
+   "id": "vb-cerrar",
+   "inf": "cerrar",
+   "zh": "關上、關閉",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-ie",
+   "reflexive": false,
+   "pres": [
+    "cierro",
+    "cierras",
+    "cierra",
+    "cerramos",
+    "cerráis",
+    "cierran"
+   ],
+   "ger": "cerrando",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "cerro",
+     "cerras",
+     "cerra",
+     "cerramos",
+     "cerráis",
+     "cerran"
+    ],
+    "ger": "cerrando"
+   }
+  },
+  {
+   "id": "vb-entender",
+   "inf": "entender",
+   "zh": "理解、聽懂",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-ie",
+   "reflexive": false,
+   "pres": [
+    "entiendo",
+    "entiendes",
+    "entiende",
+    "entendemos",
+    "entendéis",
+    "entienden"
+   ],
+   "ger": "entendiendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "entendo",
+     "entendes",
+     "entende",
+     "entendemos",
+     "entendéis",
+     "entenden"
+    ],
+    "ger": "entendiendo"
+   }
+  },
+  {
+   "id": "vb-preferir",
+   "inf": "preferir",
+   "zh": "比較喜歡、偏好",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-ie",
+   "reflexive": false,
+   "pres": [
+    "prefiero",
+    "prefieres",
+    "prefiere",
+    "preferimos",
+    "preferís",
+    "prefieren"
+   ],
+   "ger": "prefiriendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "prefero",
+     "preferes",
+     "prefere",
+     "preferimos",
+     "preferís",
+     "preferen"
+    ],
+    "ger": "preferiendo"
+   }
+  },
+  {
+   "id": "vb-sentir",
+   "inf": "sentir",
+   "zh": "感覺、感到；sentirse＝覺得（自己）；Lo siento＝對不起",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-ie",
+   "reflexive": false,
+   "pres": [
+    "siento",
+    "sientes",
+    "siente",
+    "sentimos",
+    "sentís",
+    "sienten"
+   ],
+   "ger": "sintiendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "sento",
+     "sentes",
+     "sente",
+     "sentimos",
+     "sentís",
+     "senten"
+    ],
+    "ger": "sentiendo"
+   }
+  },
+  {
+   "id": "vb-poder",
+   "inf": "poder",
+   "zh": "能、可以",
+   "src": "ai",
+   "unit": "u11",
+   "group": "o-ue",
+   "reflexive": false,
+   "pres": [
+    "puedo",
+    "puedes",
+    "puede",
+    "podemos",
+    "podéis",
+    "pueden"
+   ],
+   "ger": "pudiendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "podo",
+     "podes",
+     "pode",
+     "podemos",
+     "podéis",
+     "poden"
+    ],
+    "ger": "podiendo"
+   }
+  },
+  {
+   "id": "vb-volver",
+   "inf": "volver",
+   "zh": "回來、回去；volver a＋原形＝再次做",
+   "src": "ai",
+   "unit": "u11",
+   "group": "o-ue",
+   "reflexive": false,
+   "pres": [
+    "vuelvo",
+    "vuelves",
+    "vuelve",
+    "volvemos",
+    "volvéis",
+    "vuelven"
+   ],
+   "ger": "volviendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "volvo",
+     "volves",
+     "volve",
+     "volvemos",
+     "volvéis",
+     "volven"
+    ],
+    "ger": "volviendo"
+   }
+  },
+  {
+   "id": "vb-dormir",
+   "inf": "dormir",
+   "zh": "睡覺",
+   "src": "ai",
+   "unit": "u11",
+   "group": "o-ue",
+   "reflexive": false,
+   "pres": [
+    "duermo",
+    "duermes",
+    "duerme",
+    "dormimos",
+    "dormís",
+    "duermen"
+   ],
+   "ger": "durmiendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "dormo",
+     "dormes",
+     "dorme",
+     "dormimos",
+     "dormís",
+     "dormen"
+    ],
+    "ger": "dormiendo"
+   }
+  },
+  {
+   "id": "vb-encontrar",
+   "inf": "encontrar",
+   "zh": "找到；遇見",
+   "src": "ai",
+   "unit": "u11",
+   "group": "o-ue",
+   "reflexive": false,
+   "pres": [
+    "encuentro",
+    "encuentras",
+    "encuentra",
+    "encontramos",
+    "encontráis",
+    "encuentran"
+   ],
+   "ger": "encontrando",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "encontro",
+     "encontras",
+     "encontra",
+     "encontramos",
+     "encontráis",
+     "encontran"
+    ],
+    "ger": "encontrando"
+   }
+  },
+  {
+   "id": "vb-contar",
+   "inf": "contar",
+   "zh": "數（數字）；講、告訴（contar una historia＝講故事）",
+   "src": "ai",
+   "unit": "u11",
+   "group": "o-ue",
+   "reflexive": false,
+   "pres": [
+    "cuento",
+    "cuentas",
+    "cuenta",
+    "contamos",
+    "contáis",
+    "cuentan"
+   ],
+   "ger": "contando",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "conto",
+     "contas",
+     "conta",
+     "contamos",
+     "contáis",
+     "contan"
+    ],
+    "ger": "contando"
+   }
+  },
+  {
+   "id": "vb-costar",
+   "inf": "costar",
+   "zh": "價錢是、花費",
+   "src": "ai",
+   "unit": "u11",
+   "group": "o-ue",
+   "reflexive": false,
+   "pres": [
+    "cuesto",
+    "cuestas",
+    "cuesta",
+    "costamos",
+    "costáis",
+    "cuestan"
+   ],
+   "ger": "costando",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "costo",
+     "costas",
+     "costa",
+     "costamos",
+     "costáis",
+     "costan"
+    ],
+    "ger": "costando"
+   }
+  },
+  {
+   "id": "vb-jugar",
+   "inf": "jugar",
+   "zh": "玩、比賽（球類）",
+   "src": "ai",
+   "unit": "u11",
+   "group": "u-ue",
+   "reflexive": false,
+   "pres": [
+    "juego",
+    "juegas",
+    "juega",
+    "jugamos",
+    "jugáis",
+    "juegan"
+   ],
+   "ger": "jugando",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "jugo",
+     "jugas",
+     "juga",
+     "jugamos",
+     "jugáis",
+     "jugan"
+    ],
+    "ger": "jugando"
+   }
+  },
+  {
+   "id": "vb-pedir",
+   "inf": "pedir",
+   "zh": "要求、點（餐）",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-i",
+   "reflexive": false,
+   "pres": [
+    "pido",
+    "pides",
+    "pide",
+    "pedimos",
+    "pedís",
+    "piden"
+   ],
+   "ger": "pidiendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "pedo",
+     "pedes",
+     "pede",
+     "pedimos",
+     "pedís",
+     "peden"
+    ],
+    "ger": "pediendo"
+   }
+  },
+  {
+   "id": "vb-servir",
+   "inf": "servir",
+   "zh": "服務、端上（飯菜）、有用",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-i",
+   "reflexive": false,
+   "pres": [
+    "sirvo",
+    "sirves",
+    "sirve",
+    "servimos",
+    "servís",
+    "sirven"
+   ],
+   "ger": "sirviendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "servo",
+     "serves",
+     "serve",
+     "servimos",
+     "servís",
+     "serven"
+    ],
+    "ger": "serviendo"
+   }
+  },
+  {
+   "id": "vb-repetir",
+   "inf": "repetir",
+   "zh": "重複、再說一次；Repite, por favor＝請再說一次",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-i",
+   "reflexive": false,
+   "pres": [
+    "repito",
+    "repites",
+    "repite",
+    "repetimos",
+    "repetís",
+    "repiten"
+   ],
+   "ger": "repitiendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "repeto",
+     "repetes",
+     "repete",
+     "repetimos",
+     "repetís",
+     "repeten"
+    ],
+    "ger": "repetiendo"
+   }
+  },
+  {
+   "id": "vb-seguir",
+   "inf": "seguir",
+   "zh": "繼續；跟隨",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-i",
+   "reflexive": false,
+   "pres": [
+    "sigo",
+    "sigues",
+    "sigue",
+    "seguimos",
+    "seguís",
+    "siguen"
+   ],
+   "ger": "siguiendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "sego",
+     "segues",
+     "segue",
+     "seguimos",
+     "seguís",
+     "seguen"
+    ],
+    "ger": "seguiendo"
+   }
+  },
+  {
+   "id": "vb-vestir",
+   "inf": "vestir",
+   "zh": "給…穿衣服、穿著",
+   "src": "ai",
+   "unit": "u11",
+   "group": "e-i",
+   "reflexive": false,
+   "pres": [
+    "visto",
+    "vistes",
+    "viste",
+    "vestimos",
+    "vestís",
+    "visten"
+   ],
+   "ger": "vistiendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "vesto",
+     "vestes",
+     "veste",
+     "vestimos",
+     "vestís",
+     "vesten"
+    ],
+    "ger": "vestiendo"
+   }
+  },
+  {
+   "id": "vb-hacer",
+   "inf": "hacer",
+   "zh": "做、製作；天氣用法：hace frío＝天冷；第一人稱 hago",
+   "src": "ai",
+   "unit": "u12",
+   "group": "yo-go",
+   "reflexive": false,
+   "pres": [
+    "hago",
+    "haces",
+    "hace",
+    "hacemos",
+    "hacéis",
+    "hacen"
+   ],
+   "ger": "haciendo",
+   "irregularForms": [
+    0
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "haco",
+     "haces",
+     "hace",
+     "hacemos",
+     "hacéis",
+     "hacen"
+    ],
+    "ger": "haciendo"
+   }
+  },
+  {
+   "id": "vb-poner",
+   "inf": "poner",
+   "zh": "放置；打開（電器）；ponerse＝穿上",
+   "src": "ai",
+   "unit": "u12",
+   "group": "yo-go",
+   "reflexive": false,
+   "pres": [
+    "pongo",
+    "pones",
+    "pone",
+    "ponemos",
+    "ponéis",
+    "ponen"
+   ],
+   "ger": "poniendo",
+   "irregularForms": [
+    0
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "pono",
+     "pones",
+     "pone",
+     "ponemos",
+     "ponéis",
+     "ponen"
+    ],
+    "ger": "poniendo"
+   }
+  },
+  {
+   "id": "vb-salir",
+   "inf": "salir",
+   "zh": "出去、離開；出發；salir con＝和…交往",
+   "src": "ai",
+   "unit": "u12",
+   "group": "yo-go",
+   "reflexive": false,
+   "pres": [
+    "salgo",
+    "sales",
+    "sale",
+    "salimos",
+    "salís",
+    "salen"
+   ],
+   "ger": "saliendo",
+   "irregularForms": [
+    0
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "salo",
+     "sales",
+     "sale",
+     "salimos",
+     "salís",
+     "salen"
+    ],
+    "ger": "saliendo"
+   }
+  },
+  {
+   "id": "vb-traer",
+   "inf": "traer",
+   "zh": "帶來、拿來",
+   "src": "ai",
+   "unit": "u12",
+   "group": "yo-go",
+   "reflexive": false,
+   "pres": [
+    "traigo",
+    "traes",
+    "trae",
+    "traemos",
+    "traéis",
+    "traen"
+   ],
+   "ger": "trayendo",
+   "irregularForms": [
+    0
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "trao",
+     "traes",
+     "trae",
+     "traemos",
+     "traéis",
+     "traen"
+    ],
+    "ger": "traiendo"
+   }
+  },
+  {
+   "id": "vb-tener",
+   "inf": "tener",
+   "zh": "有；tener que＋原形＝必須；tengo hambre＝我餓了",
+   "src": "ai",
+   "unit": "u09",
+   "group": "yo-go",
+   "reflexive": false,
+   "pres": [
+    "tengo",
+    "tienes",
+    "tiene",
+    "tenemos",
+    "tenéis",
+    "tienen"
+   ],
+   "ger": "teniendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "teno",
+     "tenes",
+     "tene",
+     "tenemos",
+     "tenéis",
+     "tenen"
+    ],
+    "ger": "teniendo"
+   },
+   "also": [
+    "e-ie"
+   ]
+  },
+  {
+   "id": "vb-venir",
+   "inf": "venir",
+   "zh": "來",
+   "src": "ai",
+   "unit": "u11",
+   "group": "yo-go",
+   "reflexive": false,
+   "pres": [
+    "vengo",
+    "vienes",
+    "viene",
+    "venimos",
+    "venís",
+    "vienen"
+   ],
+   "ger": "viniendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "veno",
+     "venes",
+     "vene",
+     "venimos",
+     "venís",
+     "venen"
+    ],
+    "ger": "veniendo"
+   },
+   "also": [
+    "e-ie"
+   ]
+  },
+  {
+   "id": "vb-decir",
+   "inf": "decir",
+   "zh": "說、告訴",
+   "src": "ai",
+   "unit": "u11",
+   "group": "yo-go",
+   "reflexive": false,
+   "pres": [
+    "digo",
+    "dices",
+    "dice",
+    "decimos",
+    "decís",
+    "dicen"
+   ],
+   "ger": "diciendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "deco",
+     "deces",
+     "dece",
+     "decimos",
+     "decís",
+     "decen"
+    ],
+    "ger": "deciendo"
+   },
+   "also": [
+    "e-i"
+   ]
+  },
+  {
+   "id": "vb-oír",
+   "inf": "oír",
+   "zh": "聽見（不是專心聽）",
+   "src": "ai",
+   "unit": "u12",
+   "group": "yo-go",
+   "reflexive": false,
+   "pres": [
+    "oigo",
+    "oyes",
+    "oye",
+    "oímos",
+    "oís",
+    "oyen"
+   ],
+   "ger": "oyendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    3,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "oo",
+     "oes",
+     "oe",
+     "oimos",
+     "oís",
+     "oen"
+    ],
+    "ger": "oiendo"
+   }
+  },
+  {
+   "id": "vb-conocer",
+   "inf": "conocer",
+   "zh": "認識（人、地方）；第一人稱 conozco",
+   "src": "ai",
+   "unit": "u12",
+   "group": "yo-zco",
+   "reflexive": false,
+   "pres": [
+    "conozco",
+    "conoces",
+    "conoce",
+    "conocemos",
+    "conocéis",
+    "conocen"
+   ],
+   "ger": "conociendo",
+   "irregularForms": [
+    0
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "conoco",
+     "conoces",
+     "conoce",
+     "conocemos",
+     "conocéis",
+     "conocen"
+    ],
+    "ger": "conociendo"
+   }
+  },
+  {
+   "id": "vb-saber",
+   "inf": "saber",
+   "zh": "知道；會（saber nadar）；第一人稱 sé",
+   "src": "ai",
+   "unit": "u12",
+   "group": "yo-other",
+   "reflexive": false,
+   "pres": [
+    "sé",
+    "sabes",
+    "sabe",
+    "sabemos",
+    "sabéis",
+    "saben"
+   ],
+   "ger": "sabiendo",
+   "irregularForms": [
+    0
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "sabo",
+     "sabes",
+     "sabe",
+     "sabemos",
+     "sabéis",
+     "saben"
+    ],
+    "ger": "sabiendo"
+   }
+  },
+  {
+   "id": "vb-ver",
+   "inf": "ver",
+   "zh": "看見",
+   "src": "ai",
+   "unit": "u12",
+   "group": "yo-other",
+   "reflexive": false,
+   "pres": [
+    "veo",
+    "ves",
+    "ve",
+    "vemos",
+    "veis",
+    "ven"
+   ],
+   "ger": "viendo",
+   "irregularForms": [
+    0
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "vo",
+     "ves",
+     "ve",
+     "vemos",
+     "véis",
+     "ven"
+    ],
+    "ger": "viendo"
+   }
+  },
+  {
+   "id": "vb-dar",
+   "inf": "dar",
+   "zh": "給；第一人稱 doy；dar un paseo＝散步",
+   "src": "ai",
+   "unit": "u12",
+   "group": "yo-other",
+   "reflexive": false,
+   "pres": [
+    "doy",
+    "das",
+    "da",
+    "damos",
+    "dais",
+    "dan"
+   ],
+   "ger": "dando",
+   "irregularForms": [
+    0
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "do",
+     "das",
+     "da",
+     "damos",
+     "dáis",
+     "dan"
+    ],
+    "ger": "dando"
+   }
+  },
+  {
+   "id": "vb-ser",
+   "inf": "ser",
+   "zh": "是（身分、國籍、職業、本質）",
+   "src": "ai",
+   "unit": "u03",
+   "group": "irregular",
+   "reflexive": false,
+   "pres": [
+    "soy",
+    "eres",
+    "es",
+    "somos",
+    "sois",
+    "son"
+   ],
+   "ger": "siendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "so",
+     "ses",
+     "se",
+     "semos",
+     "séis",
+     "sen"
+    ],
+    "ger": "siendo"
+   }
+  },
+  {
+   "id": "vb-estar",
+   "inf": "estar",
+   "zh": "在（位置）；處於（狀態，如 estoy cansado）",
+   "src": "ai",
+   "unit": "u04",
+   "group": "irregular",
+   "reflexive": false,
+   "pres": [
+    "estoy",
+    "estás",
+    "está",
+    "estamos",
+    "estáis",
+    "están"
+   ],
+   "ger": "estando",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "esto",
+     "estas",
+     "esta",
+     "estamos",
+     "estáis",
+     "estan"
+    ],
+    "ger": "estando"
+   }
+  },
+  {
+   "id": "vb-ir",
+   "inf": "ir",
+   "zh": "去；ir a＋原形＝即將做（voy a comer）",
+   "src": "ai",
+   "unit": "u10",
+   "group": "irregular",
+   "reflexive": false,
+   "pres": [
+    "voy",
+    "vas",
+    "va",
+    "vamos",
+    "vais",
+    "van"
+   ],
+   "ger": "yendo",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "gerIrregular": true,
+   "plain": {
+    "pres": [
+     "o",
+     "es",
+     "e",
+     "imos",
+     "ís",
+     "en"
+    ],
+    "ger": "iendo"
+   }
+  },
+  {
+   "id": "vb-llamarse",
+   "inf": "llamarse",
+   "zh": "名叫",
+   "src": "ai",
+   "unit": "u13",
+   "group": "reg-ar",
+   "reflexive": true,
+   "pres": [
+    "llamo",
+    "llamas",
+    "llama",
+    "llamamos",
+    "llamáis",
+    "llaman"
+   ],
+   "ger": "llamando",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "llamo",
+     "llamas",
+     "llama",
+     "llamamos",
+     "llamáis",
+     "llaman"
+    ],
+    "ger": "llamando"
+   }
+  },
+  {
+   "id": "vb-levantarse",
+   "inf": "levantarse",
+   "zh": "起床、起身",
+   "src": "ai",
+   "unit": "u13",
+   "group": "reg-ar",
+   "reflexive": true,
+   "pres": [
+    "levanto",
+    "levantas",
+    "levanta",
+    "levantamos",
+    "levantáis",
+    "levantan"
+   ],
+   "ger": "levantando",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "levanto",
+     "levantas",
+     "levanta",
+     "levantamos",
+     "levantáis",
+     "levantan"
+    ],
+    "ger": "levantando"
+   }
+  },
+  {
+   "id": "vb-acostarse",
+   "inf": "acostarse",
+   "zh": "上床睡覺、躺下",
+   "src": "ai",
+   "unit": "u13",
+   "group": "o-ue",
+   "reflexive": true,
+   "pres": [
+    "acuesto",
+    "acuestas",
+    "acuesta",
+    "acostamos",
+    "acostáis",
+    "acuestan"
+   ],
+   "ger": "acostando",
+   "irregularForms": [
+    0,
+    1,
+    2,
+    5
+   ],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "acosto",
+     "acostas",
+     "acosta",
+     "acostamos",
+     "acostáis",
+     "acostan"
+    ],
+    "ger": "acostando"
+   }
+  },
+  {
+   "id": "vb-ducharse",
+   "inf": "ducharse",
+   "zh": "沖澡",
+   "src": "ai",
+   "unit": "u13",
+   "group": "reg-ar",
+   "reflexive": true,
+   "pres": [
+    "ducho",
+    "duchas",
+    "ducha",
+    "duchamos",
+    "ducháis",
+    "duchan"
+   ],
+   "ger": "duchando",
+   "irregularForms": [],
+   "gerIrregular": false,
+   "plain": {
+    "pres": [
+     "ducho",
+     "duchas",
+     "ducha",
+     "duchamos",
+     "ducháis",
+     "duchan"
+    ],
+    "ger": "duchando"
+   }
+  }
+ ]
+}

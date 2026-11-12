@@ -1,7 +1,7 @@
 // service worker：第一次開啟就把 App 需要的檔案全部快取起來，之後離線也能用。
 // 改了任何要快取的檔案，就把 VERSION 加 1，手機才會抓新版（tests/sw-version.test.mjs 會檢查，忘了就失敗）。
 // 加完 1 之後執行 node tools/stamp-sw.mjs 更新 tests/sw-manifest.json。這是 App 版本號唯一定義的地方，設定頁也是讀這裡。
-const VERSION = "v28";
+const VERSION = "v31";
 const CACHE = `spanish-tutor-${VERSION}`;
 
 const PRECACHE = [
@@ -14,6 +14,7 @@ const PRECACHE = [
   "content/vocab/core300.json",
   "content/vocab/social-abbr.json",
   "content/gender-traps.json",
+  "content/verbs.json",
   "js/main.js",
   "js/data.js",
   "js/store.js",
@@ -24,6 +25,7 @@ const PRECACHE = [
   "js/ui.js",
   "js/words.js",
   "js/gender.js",
+  "js/verbs.js",
   "js/practice.js",
   "js/reports.js",
   "js/exporter.js",
@@ -42,6 +44,7 @@ const PRECACHE = [
   "js/views/sheet.js",
   "js/views/sieve.js",
   "js/views/gender.js",
+  "js/views/verbs.js",
   "icons/icon-192.png",
   "icons/icon-512.png",
   "icons/apple-touch-icon.png",

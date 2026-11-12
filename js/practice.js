@@ -69,13 +69,24 @@ export function promptText(word) {
   const main = splitZh(word.zh ?? "").main;
   const mask = (s) => {
     let out = s;
-    for (const f of String(word.es ?? "").split(/[、,，]/).map((x) => x.trim()).filter((x) => x.length >= 2)) {
+    const base = String(word.es ?? "").split(/[、,，]/).map((x) => x.trim()).filter((x) => x.length >= 2);
+    // 陰陽性、單複數變形也遮：puto 的題面「puta 的陽性」等於給答案（2a 審核）
+    const variants = base.flatMap((f) => (/[oa]$/.test(f) && f.length >= 3 ? [f, f.slice(0, -1) + "o", f.slice(0, -1) + "a", f.slice(0, -1) + "os", f.slice(0, -1) + "as"] : [f, f + "s", f + "es"]));
+    for (const f of [...new Set(variants)]) {
       const re = new RegExp(`(^|[^\\p{L}])${f.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?=[^\\p{L}]|$)`, "giu");
       out = out.replace(re, (_, pre) => `${pre}～`);
     }
     return out;
   };
-  const stripped = main.replace(/（[^）]*）/g, "").replace(/\([^)]*\)/g, "").replace(/^[^＝=]*[A-Za-zÀ-ÿ][^＝=]*[＝=]/, "").trim();
+  // 複審 B1～B3：只去掉「含西文」的括號（純中文說明保留，ser／estar、pregunta／problema 才分得出來）；
+  // 「；」切在括號裡造成的沒關上括號也一樣處理；開頭「X＝」只有 X 整段是西文（xq＝）才去掉，「助動詞，he comido＝」不去。
+  const stripped = main
+    .replace(/（[^）]*[A-Za-zÀ-ÿ][^）]*）/g, "")
+    .replace(/\([^)]*[A-Za-zÀ-ÿ][^)]*\)/g, "")
+    .replace(/（[^）]*[A-Za-zÀ-ÿ][^）]*$/, "")
+    .replace(/^[A-Za-zÀ-ÿ\s'’.＋+-]+[＝=]/, "")
+    .replace(/（([^）]*)$/, "（$1）") // 「；」切在純中文括號裡：補上右括號（2a 審核 B7）
+    .trim();
   return mask(stripped || main).trim() || main;
 }
 
