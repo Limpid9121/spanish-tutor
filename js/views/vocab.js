@@ -2,7 +2,7 @@ import { h } from "../ui.js";
 import { cardState, splitZh, spanishWithArticle, matchesQuery } from "../words.js";
 import { isFamiliar } from "../session.js";
 import { toast, TOAST_LONG_MS } from "../ui.js";
-import { speakBtn, spanishWord, posLine, meaningBlock, exampleBlock } from "./card.js";
+import { speakBtn, spanishWord, posLine, meaningBlock, exampleBlocks } from "./card.js";
 
 export async function renderVocab(root, ctx) {
   const { store, vocab } = ctx;
@@ -54,7 +54,7 @@ export async function renderWord(root, ctx, id) {
     h("a", { class: "back", href: "#/vocab" }, "‹ 單字"),
     posLine(w),
     h("div", { class: "rv-head" }, spanishWord(w), speakBtn(w.es)),
-    h("div", { class: "answer" }, meaningBlock(w), exampleBlock(w)),
+    h("div", { class: "answer" }, meaningBlock(w), exampleBlocks(w)),
     h("div", { class: "row fam-row" }, h("div", { class: "label" }, "已熟悉", h("small", {}, "打開後不再出現在新字和複習裡")), sw),
     h("p", { class: "muted small", style: "margin-top:32px" }, status),
   );

@@ -1132,7 +1132,21 @@
      "jugan"
     ],
     "ger": "jugando"
-   }
+   },
+   "ex": [
+    {
+     "es": "Jugamos al fútbol cada sábado.",
+     "zh": "我們每週六踢足球。",
+     "tatoeba": 340311,
+     "zhSrc": "ai"
+    },
+    {
+     "es": "Ahora estoy jugando al fútbol.",
+     "zh": "我正在踢足球。",
+     "tatoeba": 793021,
+     "zhSrc": "ai"
+    }
+   ]
   },
   {
    "id": "vb-pedir",
@@ -1873,7 +1887,15 @@
      "llaman"
     ],
     "ger": "llamando"
-   }
+   },
+   "ex": [
+    {
+     "es": "Me llamo Ana, ¿y tú?",
+     "zh": "我叫安娜，你呢？",
+     "tatoeba": 6150916,
+     "tatoebaZh": 6142034
+    }
+   ]
   },
   {
    "id": "vb-levantarse",
@@ -1940,7 +1962,21 @@
      "acostan"
     ],
     "ger": "acostando"
-   }
+   },
+   "ex": [
+    {
+     "es": "Me acuesto a las 11.",
+     "zh": "我十一點上床睡覺。",
+     "tatoeba": 509568,
+     "zhSrc": "ai"
+    },
+    {
+     "es": "Ella siempre se acuesta tarde.",
+     "zh": "她總是很晚上床睡覺。",
+     "tatoeba": 9075833,
+     "zhSrc": "ai"
+    }
+   ]
   },
   {
    "id": "vb-ducharse",

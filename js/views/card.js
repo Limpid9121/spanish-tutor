@@ -34,13 +34,11 @@ export function meaningBlock(word) {
   return [h("p", { class: "meaning", lang: "zh-Hant" }, main), ...more.map((m) => h("p", { class: "more", lang: "zh-Hant" }, m))];
 }
 
-export function exampleBlock(word) {
-  const ex = word.ex?.[0];
-  if (!ex) return null;
-  return h("div", { class: "example" },
+export function exampleBlocks(word) {
+  return (word.ex ?? []).map((ex) => h("div", { class: "example" },
     h("div", {},
       h("p", { class: "es", lang: "es" }, ex.es),
       h("p", { class: "zh", lang: "zh-Hant" }, ex.zh),
       ex.tense_ok === false ? h("p", { class: "tense-note", lang: "zh-Hant" }, "含還沒學的時態") : null),
-    speakBtn(ex.es, "播放例句"));
+    speakBtn(ex.es, "播放例句")));
 }

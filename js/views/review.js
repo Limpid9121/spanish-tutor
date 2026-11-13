@@ -4,7 +4,7 @@ import { GRADES, dayKey } from "../srs.js";
 import { checkTyped, makeChoices, suggestGrade, answerModeOf, accentSegments, inQuiz } from "../practice.js";
 import { trackVisualViewport } from "../viewport.js";
 import { openReport } from "./report.js";
-import { speakBtn, spanishWord, chineseFront, posLine, meaningBlock, exampleBlock } from "./card.js";
+import { speakBtn, spanishWord, chineseFront, posLine, meaningBlock, exampleBlocks } from "./card.js";
 
 const ACCENT_KEYS = ["á", "é", "í", "ó", "ú", "ñ", "ü"];
 
@@ -67,7 +67,7 @@ export async function renderReview(root, ctx) {
       kind === "type" && turn.answer ? verdictBlock(turn.answer) : null,
       rev ? h("div", { class: "rv-head" }, spanishWord(w), speakBtn(w.es)) : meaningBlock(w),
       rev ? h("div", { style: "margin-top:12px" }, meaningBlock(w)) : null,
-      exampleBlock(w),
+      exampleBlocks(w),
       // 回報鍵：放在例句下方靠右（他 2026-11-11 選 A：原本在頂排的灰色小字他找不到），離底下的評分鍵遠，不會誤按
       h("div", { class: "report-row" }, h("button", {
         class: `report${reported.has(item.id) ? " sent" : ""}`, type: "button", "aria-label": "回報這張卡有問題",

@@ -4,7 +4,7 @@ import { h } from "../ui.js";
 import { loadVerbs } from "../data.js";
 import { lenClass } from "../words.js";
 import { groupSections, cellMarks, gerMark, speakText, findVerb, gerundNote, alsoLabel } from "../verbs.js";
-import { speakBtn } from "./card.js";
+import { exampleBlocks, speakBtn } from "./card.js";
 
 export async function renderVerbs(root) {
   const data = await loadVerbs();
@@ -65,6 +65,7 @@ export async function renderVerb(root, ctx, id) {
     // 不能把 null 直接放進 append（DOM 會把它變成字串 "null"），所以用展開的陣列
     ...(gnote ? [h("p", { class: "note", lang: "es" }, gnote)] : []),
     ...(v.reflexive ? [h("p", { class: "note", lang: "zh-Hant" }, "反身動詞：me、te、se、nos、os、se 要放在動詞前面。")] : []),
+    ...exampleBlocks(v),
     h("p", { class: "note", lang: "zh-Hant" }, "有底色和底線的字母，是跟一般規則不一樣的地方。"),
     h("p", { class: "muted small v-src", lang: "zh-Hant" }, "中文釋義與組別說明是 AI 寫的，還沒人審過。"),
   );
