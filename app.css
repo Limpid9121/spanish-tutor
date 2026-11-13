@@ -302,3 +302,20 @@ button.row, a.row { width: 100%; background: none; border-left: 0; border-right:
 .vpron { color: var(--text-2); }
 .vrow.dim .vp, .vrow.dim .vf { opacity: .55; }
 .v-src { margin-top: 24px; }
+
+/* 動詞變化練習（第 2b 批） */
+.verb-entry { margin: 14px 0 0; }
+.verb-entry b { font-family: var(--serif); font-weight: 500; font-size: 1.15em; padding: 0 .15em; }
+.vd-zh { margin: 8px 0 0; }
+.vd-table { margin-top: 8px; }
+.vrow.asked .vf { box-shadow: inset 0 0 0 2px var(--accent); }
+.vrow.asked.bad .vf { box-shadow: inset 0 0 0 2px var(--text-2); }
+.v-asked { flex: none; font-size: .75rem; color: var(--text-2); letter-spacing: .04em; }
+.align { margin: 10px 0 0; display: grid; gap: 6px; }
+.al-row { display: grid; gap: 2px; }
+.al-l { font-size: .75rem; color: var(--text-2); letter-spacing: .04em; }
+.al-cells { display: flex; flex-wrap: wrap; font-family: var(--serif); font-size: 1.375rem; line-height: 1.5; }
+.ac { display: inline-block; min-width: 1.05em; padding: 0 .04em; text-align: center; border-radius: 4px; }
+.ac.x.miss { background: var(--tint-hard); }
+.ac.x.err { background: var(--tint-again); }
+.verb-drill-entry { margin: 16px 0 8px; } /* 動詞分頁「練習變化」入口，跟說明文字隔開 */

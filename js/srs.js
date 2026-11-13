@@ -58,6 +58,12 @@ export function newRecord(wordId, dir, now = new Date()) {
   return toRecord({ id: cardId(wordId, dir), wordId, dir, added: now.getTime() }, empty);
 }
 
+// 動詞卡（第 2b 批）：每個「動詞＋時態」一張，id 是 vb-xxx:pres、vb-xxx:ger，dir "v"，另外帶 tense。
+export function newVerbRecord(verbId, tense, now = new Date()) {
+  const empty = globalThis.FSRS.createEmptyCard(now);
+  return toRecord({ id: `${verbId}:${tense}`, wordId: verbId, dir: "v", tense, added: now.getTime() }, empty);
+}
+
 // 評分：回傳新的卡片紀錄（不改原本那份）
 export function review(rec, grade, now = new Date()) {
   if (![1, 2, 3, 4].includes(grade)) throw new Error(`評分只能是 1～4：${grade}`);

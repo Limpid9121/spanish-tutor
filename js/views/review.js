@@ -2,11 +2,9 @@ import { h, toast, TOAST_LONG_MS } from "../ui.js";
 import { buildToday, gradeStep } from "../session.js";
 import { GRADES, dayKey } from "../srs.js";
 import { checkTyped, makeChoices, suggestGrade, answerModeOf, accentSegments, inQuiz } from "../practice.js";
-import { trackVisualViewport } from "../viewport.js";
 import { openReport } from "./report.js";
 import { speakBtn, spanishWord, chineseFront, posLine, meaningBlock, exampleBlocks } from "./card.js";
-
-const ACCENT_KEYS = ["á", "é", "í", "ó", "ú", "ñ", "ü"];
+import { typeForm as makeTypeForm, typingController } from "./typing.js";
 
 export async function renderReview(root, ctx) {
   const { store, vocab, byId } = ctx;
@@ -22,21 +20,13 @@ export async function renderReview(root, ctx) {
   let turn = {}; // 目前這張卡的作答狀態：{ choices, answer }。評分成功換下一張時清空
   let curKind = "flip"; // 目前這張卡的作答種類：type／choice／flip（鍵盤捷徑要看）
   let typeInput = null;
-  let untrack = null;
 
   const wrap = h("div", { class: "review" });
   root.append(wrap);
+  const typing = typingController(wrap);
 
-  // 打字時鍵盤會蓋住畫面下半部：讓外框跟著 visualViewport（鍵盤彈出後真正看得到的區域），輸入框與按鍵就不會被蓋住
-  function setTyping(on) {
-    wrap.classList.toggle("typing", on);
-    if (on && !untrack) untrack = trackVisualViewport(wrap);
-    if (!on && untrack) {
-      untrack();
-      untrack = null;
-      for (const p of ["top", "height", "bottom"]) wrap.style.removeProperty(p);
-    }
-  }
+  // 打字時鍵盤會蓋住畫面下半部：讓外框跟著 visualViewport（鍵盤彈出後真正看得到的區域），輸入框與按鍵就不會被蓋住（共用零件在 typing.js）
+  const setTyping = (on) => typing.set(on);
 
   function finish() {
     setTyping(false);
@@ -101,25 +91,9 @@ export async function renderReview(root, ctx) {
 
   // ---- 看中文、打西文 ----
   function typeForm(w) {
-    const input = h("input", {
-      class: "type-input", type: "text", lang: "es", autocapitalize: "off", autocorrect: "off", autocomplete: "off",
-      spellcheck: "false", enterkeyhint: "done", "aria-label": "用西文作答", placeholder: "輸入西文",
-    });
-    typeInput = input;
-    const insert = (ch) => {
-      const a = input.selectionStart ?? input.value.length;
-      const b = input.selectionEnd ?? a;
-      input.setRangeText(ch, a, b, "end");
-      input.focus({ preventScroll: true });
-    };
-    return h("form", { class: "type-form", onsubmit: (e) => { e.preventDefault(); submitTyped(w, input.value); } },
-      input,
-      h("div", { class: "accent-keys" }, ACCENT_KEYS.map((ch) => h("button", {
-        type: "button", "aria-label": `插入 ${ch}`,
-        onmousedown: (e) => e.preventDefault(), // 按下去不讓輸入框失去焦點，鍵盤才不會收起來
-        onclick: () => insert(ch),
-      }, ch))),
-      h("button", { class: "btn primary block", type: "submit" }, "送出"));
+    const tf = makeTypeForm({ onSubmit: (value) => submitTyped(w, value) });
+    typeInput = tf.input;
+    return tf.form;
   }
 
   function submitTyped(w, value) {

@@ -46,10 +46,12 @@ export async function renderSettings(root, ctx) {
     }
   };
 
-  const stepper = () => h("div", { class: "stepper" },
-    h("button", { type: "button", "aria-label": "減少", disabled: settings.newPerDay <= 0, onclick: () => save({ newPerDay: Math.max(0, settings.newPerDay - 1) }) }, "−"),
-    h("output", { "aria-live": "polite" }, settings.newPerDay),
-    h("button", { type: "button", "aria-label": "增加", disabled: settings.newPerDay >= 50, onclick: () => save({ newPerDay: Math.min(50, settings.newPerDay + 1) }) }, "+"));
+  // 數量調整鈕：每天新字（上限 50）、每天新動詞（上限 20）共用
+  const stepperFor = (key, max) => h("div", { class: "stepper" },
+    h("button", { type: "button", "aria-label": "減少", disabled: settings[key] <= 0, onclick: () => save({ [key]: Math.max(0, settings[key] - 1) }) }, "−"),
+    h("output", { "aria-live": "polite" }, settings[key]),
+    h("button", { type: "button", "aria-label": "增加", disabled: settings[key] >= max, onclick: () => save({ [key]: Math.min(max, settings[key] + 1) }) }, "+"));
+  const stepper = () => stepperFor("newPerDay", 50);
 
   const sizes = [["s", "小"], ["m", "中"], ["l", "大"]];
   const seg = () => h("div", { class: "seg", role: "group", "aria-label": "字級" },
@@ -60,6 +62,7 @@ export async function renderSettings(root, ctx) {
     options.map(([v, text]) => h("button", { type: "button", "aria-pressed": answerModeOf(settings)[key] === v ? "true" : "false", onclick: () => save({ answerMode: { ...answerModeOf(settings), [key]: v } }) }, text)));
 
   const toggle = () => h("button", { class: "switch", type: "button", role: "switch", "aria-label": "反向卡", "aria-checked": settings.reverse ? "true" : "false", onclick: () => save({ reverse: !settings.reverse }) });
+  const vosotrosSwitch = () => h("button", { class: "switch", type: "button", role: "switch", "aria-label": "練習包含 vosotros", "aria-checked": settings.verbVosotros === true ? "true" : "false", onclick: () => save({ verbVosotros: settings.verbVosotros !== true }) });
   const sourceSwitch = (key, label) => h("button", {
     class: "switch", type: "button", role: "switch", "aria-label": `新字來源：${label}`, "aria-checked": settings.sources?.[key] === false ? "false" : "true",
     onclick: () => save({ sources: { ...settings.sources, [key]: settings.sources?.[key] === false } }),
@@ -134,6 +137,10 @@ export async function renderSettings(root, ctx) {
         h("div", { class: "row" }, h("div", { class: "label" }, "看中文的卡", h("small", {}, "要先開上面的反向卡才會出現")), modeSeg("r", "看中文的卡的作答方式", [["type", "打字"], ["flip", "翻面"]])),
         h("div", { class: "row" }, h("div", { class: "label" }, "看西文的卡"), modeSeg("f", "看西文的卡的作答方式", [["choice", "選擇題"], ["flip", "翻面"]])),
         h("p", { class: "note" }, "不管怎麼作答，翻面後都由你按四個鍵評分；打字或選擇題只會標出建議的那一個。")),
+      h("div", { class: "group" },
+        h("p", { class: "group-title" }, "動詞練習"),
+        h("div", { class: "row" }, h("div", { class: "label" }, "每天新動詞", h("small", {}, "每個新動詞有現在式、現在分詞兩張卡")), stepperFor("newVerbsPerDay", 20)),
+        h("div", { class: "row" }, h("div", { class: "label" }, "練習包含 vosotros", h("small", {}, "西班牙用，拉丁美洲用 ustedes；預設不考")), vosotrosSwitch())),
       h("div", { class: "group" },
         h("p", { class: "group-title" }, "新字來源"),
         SOURCE_ROWS.map(([key, label, hint]) => h("div", { class: "row" }, h("div", { class: "label" }, label, h("small", {}, hint)), sourceSwitch(key, label))),

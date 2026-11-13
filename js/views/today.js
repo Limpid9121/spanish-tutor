@@ -3,6 +3,8 @@ import { buildToday, wordCards } from "../session.js";
 import { dayKey } from "../srs.js";
 import { cardState } from "../words.js";
 import { shouldOfferSieve } from "../sieve.js";
+import { loadVerbs } from "../data.js";
+import { verbDueCount } from "../verbDrill.js";
 
 export async function renderToday(root, ctx) {
   const { store, vocab } = ctx;
@@ -13,6 +15,8 @@ export async function renderToday(root, ctx) {
   const learned = vocab.filter((w) => cards.has(`${w.id}:f`)).length;
   const known = vocab.filter((w) => cardState(cards.get(`${w.id}:f`)) === "known").length;
   const total = t.queue.length;
+  let verbDue = null; // 動詞練習到期幾張；動詞資料讀不到就不顯示這一行（不影響單字複習）
+  try { verbDue = verbDueCount(cards, (await loadVerbs()).verbs, now); } catch (e) { console.error(e); }
 
   const line = total === 0
     ? h("p", { class: "today-line" }, "今天的字都複習完了。")
@@ -26,6 +30,9 @@ export async function renderToday(root, ctx) {
     h("h1", { class: "title" }, "今日"),
     line,
     h("a", { class: `btn primary block${total === 0 ? " disabled" : ""}`, href: "#/review", "aria-disabled": total === 0 ? "true" : false }, "開始"),
+    // 不能把 null 交給 append（DOM 會把它變成字串 "null"），所以用展開的陣列
+    ...(verbDue === null ? [] : [h("a", { class: "gender-entry verb-entry", href: "#/verb-drill" },
+      h("span", {}, "動詞：到期 ", h("b", {}, verbDue), " 張"), h("span", { class: "chev", "aria-hidden": "true" }, "›"))]),
     h("div", { class: "today-foot" },
       h("div", { class: "bar", role: "img", "aria-label": `已學 ${learned} 個，共 ${vocab.length} 個` }, h("i", { style: `width:${(learned / vocab.length) * 100}%` })),
       h("p", { class: "muted small" }, `已學 ${learned} ／ ${vocab.length}　　記熟 ${known}`)),

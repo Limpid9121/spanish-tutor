@@ -8,7 +8,7 @@ const ALL_ART = [...ART.m, ...ART.f];
 const ACCENTED = /[áéíóúñüÁÉÍÓÚÑÜ]/;
 
 // 去頭尾空白、小寫、空白合併成一格、去掉句首的 ¿¡ 和句尾的標點。比對用 NFC（iOS 輸入框有時送出 字母＋組合重音）。
-function norm(s) {
+export function norm(s) {
   return String(s ?? "").normalize("NFC").trim().toLowerCase().replace(/\s+/g, " ")
     .replace(/^[¿¡\s]+/, "").replace(/[?!.,;:\s]+$/, "").trim();
 }
