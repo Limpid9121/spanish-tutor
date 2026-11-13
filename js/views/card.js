@@ -39,6 +39,6 @@ export function exampleBlocks(word) {
     h("div", {},
       h("p", { class: "es", lang: "es" }, ex.es),
       h("p", { class: "zh", lang: "zh-Hant" }, ex.zh),
-      ex.tense_ok === false ? h("p", { class: "tense-note", lang: "zh-Hant" }, "含還沒學的時態") : null),
+      ex.tense_ok === false ? h("p", { class: "tense-note", lang: "zh-Hant" }, "含還沒學的時態或語氣") : null),
     speakBtn(ex.es, "播放例句")));
 }

@@ -56,6 +56,7 @@ export async function renderVerb(root, ctx, id) {
         formSpan(m.pronoun, m.parts, m.irregular),
         speakBtn(speakText(v, m.index), `播放 ${m.label} 的發音`)))),
     h("p", { class: "note", lang: "zh-Hant" }, "vosotros 是西班牙用的；拉丁美洲用 ustedes（用 ellos／ellas 的形）。usted 用 él／ella 的形。"),
+    ...(v.reflexive ? [h("p", { class: "note", lang: "zh-Hant" }, "反身動詞的現在式：me、te、se、nos、os、se 要放在動詞前面。")] : []),
     h("h2", { class: "g-title v-sub" }, "現在分詞"),
     h("div", { class: "vtable" },
       h("div", { class: "vrow" },
@@ -63,8 +64,10 @@ export async function renderVerb(root, ctx, id) {
         formSpan("", ger.parts, ger.irregular),
         speakBtn(v.ger, "播放現在分詞的發音"))),
     // 不能把 null 直接放進 append（DOM 會把它變成字串 "null"），所以用展開的陣列
-    ...(gnote ? [h("p", { class: "note", lang: "es" }, gnote)] : []),
-    ...(v.reflexive ? [h("p", { class: "note", lang: "zh-Hant" }, "反身動詞：me、te、se、nos、os、se 要放在動詞前面。")] : []),
+    ...(gnote ? [
+      h("p", { class: "note", lang: "zh-Hant" }, "進行式裡，me、te、se… 可以放在 estar 前面，也可以接在分詞後面："),
+      h("p", { class: "note", lang: "es" }, `${gnote.before}／${gnote.after}`),
+    ] : []),
     ...exampleBlocks(v),
     h("p", { class: "note", lang: "zh-Hant" }, "有底色和底線的字母，是跟一般規則不一樣的地方。"),
     h("p", { class: "muted small v-src", lang: "zh-Hant" }, "中文釋義與組別說明是 AI 寫的，還沒人審過。"),

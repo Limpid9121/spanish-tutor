@@ -22,6 +22,11 @@ export function sourceOf(word) {
   return layer === "abbr" ? "social" : layer;
 }
 
+// 這個字的來源開關是不是開著（缺的視為開）。正向新卡（orderNew）與反向新卡（buildToday）共用這一個判斷（第 2a.1 批）。
+export function sourceEnabled(word, sources = DEFAULT_SETTINGS.sources) {
+  return sources?.[sourceOf(word)] !== false;
+}
+
 // 這個字算不算「已熟悉」：他自己改過的優先，沒改過就看內容裡的預設 familiar（第 1.1b 批決定 2）
 export function isFamiliar(word, override = {}) {
   const o = override?.[word.id];
@@ -33,7 +38,7 @@ export function isFamiliar(word, override = {}) {
 // 課本字用完就把剩下的穿插字接在後面，穿插字用完就繼續課本字。
 // sources：四個開關，缺的視為開。familiarOverride：他自己改的已熟悉。已熟悉的字不進佇列。
 export function orderNew(vocab, sources = DEFAULT_SETTINGS.sources, familiarOverride = {}) {
-  const on = (w) => sources?.[sourceOf(w)] !== false && !isFamiliar(w, familiarOverride);
+  const on = (w) => sourceEnabled(w, sources) && !isFamiliar(w, familiarOverride);
   const enabled = vocab.filter(on);
   const textbook = enabled.filter((w) => sourceOf(w) === "textbook");
   const pick = (l) => enabled.filter((w) => (w.layer ?? "") === l);
@@ -84,6 +89,7 @@ export function buildToday({ vocab, cards, settings, now = new Date(), introduce
     for (const w of vocab) {
       if (rev.length >= revRoom) break;
       if (isFamiliar(w, settings.familiarOverride)) continue;
+      if (!sourceEnabled(w, settings.sources)) continue; // 來源關掉的那層，反向新卡也不出；已在複習中的到期卡不受影響（第 2a.1 批）
       if (w.layer === "abbr") continue; // 網路用語先不入題，不產生反向卡（他 2026-11-11 的決定）
       const fRec = cards.get(cardId(w.id, "f"));
       if (fRec && fRec.added != null && dayKey(new Date(fRec.added)) === dayKey(now)) continue; // 今天才學的字，明天再出反向卡（1.3 審核建議）

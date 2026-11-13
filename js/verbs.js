@@ -60,10 +60,21 @@ export function speakText(verb, i) {
   return verb.reflexive ? `${REFLEXIVE_PRONOUNS[i]} ${verb.pres[i]}` : verb.pres[i];
 }
 
-// 反身動詞的分詞怎麼用：me estoy llamando（estar 的 yo 形取自資料，已對照過 allforms）。非反身動詞沒有。
+// 現在分詞接上代名詞要補重音：acostando → acostándome、leyendo → leyéndome（重音落在原本的重音位置）
+export function attachToGerund(ger, pronoun) {
+  const accented = ger.replace(/(a|ie|ye)ndo$/, (m) => ({ a: "á", ie: "ié", ye: "yé" })[m.slice(0, -3)] + "ndo");
+  return accented + pronoun;
+}
+
+// 用進行式不自然的反身動詞：只顯示分詞，不帶 me estoy … 的例子（llamarse 是「名字叫」，要用現在式 me llamo）
+export const NO_PROGRESSIVE_EXAMPLE = new Set(["llamarse"]);
+
+// 反身動詞的進行式有兩種位置：代名詞放 estar 前（me estoy acostando）或接在分詞後面（estoy acostándome）。
+// estar 的 yo 形取自資料（已對照過 allforms）。非反身動詞、llamarse 沒有例子（回傳 null）。
 export function gerundNote(verb, estar) {
-  if (!verb.reflexive || !estar) return null;
-  return `${REFLEXIVE_PRONOUNS[0]} ${estar.pres[0]} ${verb.ger}`;
+  if (!verb.reflexive || !estar || NO_PROGRESSIVE_EXAMPLE.has(verb.inf)) return null;
+  const pron = REFLEXIVE_PRONOUNS[0];
+  return { before: `${pron} ${estar.pres[0]} ${verb.ger}`, after: `${estar.pres[0]} ${attachToGerund(verb.ger, pron)}` };
 }
 
 // 同時有詞根變化的標示：tener ＋e→ie

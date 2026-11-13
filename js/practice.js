@@ -23,6 +23,7 @@ export function commonGender(word) {
 function allowedArticles(word) {
   if (word.gender !== "m" && word.gender !== "f") return ALL_ART;
   if (commonGender(word)) return ALL_ART;
+  if (word.number === "pl") return word.gender === "m" ? ["los", "unos"] : ["las", "unas"]; // 複數詞不收單數冠詞（la vacaciones 是錯的）
   if (word.gender === "f" && article(word) === "el") return ["el", "un", "una", "las", "unas"]; // el agua：單數不用 la
   return ART[word.gender];
 }

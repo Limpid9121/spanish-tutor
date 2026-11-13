@@ -9,6 +9,7 @@ export const EL_FEMININE = new Set(["agua", "arma", "hambre", "águila", "alma",
 
 export function article(word) {
   if (word.pos !== "n" || !word.gender) return null;
+  if (word.number === "pl") return word.gender === "m" ? "los" : "las"; // 只以複數出現的詞（vacaciones、ganas、cojones）：第 2a.1 批
   if (word.gender === "m") return "el";
   return EL_FEMININE.has(word.es) ? "el" : "la";
 }
@@ -21,7 +22,8 @@ export function spanishWithArticle(word) {
 
 export function posLabel(word) {
   const p = POS_ZH[word.pos] ?? word.pos;
-  return word.pos === "n" && word.gender ? `${p}・${GENDER_ZH[word.gender]}` : p;
+  if (word.pos !== "n" || !word.gender) return p;
+  return `${p}・${GENDER_ZH[word.gender]}${word.number === "pl" ? "・複數" : ""}`; // 只用複數的詞條標「複數」（2a.1 審核建議）
 }
 
 // 中文釋義以「；」分成主要意思與補充
