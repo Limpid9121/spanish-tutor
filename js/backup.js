@@ -30,8 +30,9 @@ export function parseBackup(text) {
   if (!Array.isArray(obj.cards) || !Array.isArray(obj.log)) throw new Error("備份檔內容不完整。");
   const ids = new Set();
   for (const c of obj.cards) {
-    if (typeof c?.id !== "string" || typeof c.wordId !== "string" || !["f", "r", "g", "v"].includes(c.dir)) throw new Error("備份檔裡有格式錯誤的卡片。");
+    if (typeof c?.id !== "string" || typeof c.wordId !== "string" || !["f", "r", "g", "v", "u"].includes(c.dir)) throw new Error("備份檔裡有格式錯誤的卡片。");
     if (c.dir === "v" && typeof c.tense !== "string") throw new Error(`備份檔裡的動詞卡片 ${c.id} 缺少時態。`); // 動詞卡（第 2b 批）：dir v、帶 tense
+    if (c.dir === "u" && typeof c.unit !== "string") throw new Error(`備份檔裡的文法題卡片 ${c.id} 缺少單元。`); // 文法題卡（第 3a 批）：dir u、帶 unit
     for (const k of CARD_NUMS) if (typeof c[k] !== "number" || Number.isNaN(c[k])) throw new Error(`備份檔裡的卡片 ${c.id} 欄位 ${k} 有誤。`);
     // last_review：新卡沒有上次複習時間（null），其他要是數字
     if (c.last_review !== null && (typeof c.last_review !== "number" || Number.isNaN(c.last_review))) throw new Error(`備份檔裡的卡片 ${c.id} 欄位 last_review 有誤。`);

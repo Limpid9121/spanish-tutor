@@ -1,0 +1,262 @@
+{
+  "id": "u04",
+  "level": "A1",
+  "title": "estar：在哪裡、現在怎麼樣",
+  "src": "ai",
+  "rule": "estar 用來說人或東西「在哪裡」，以及「現在的狀態」（累、忙、好、不好）；ser 說「本來是什麼」（身分、國籍、職業）。",
+  "table": [
+    [
+      "yo estoy",
+      "我在／我現在（狀態）"
+    ],
+    [
+      "tú estás",
+      "你在／你現在"
+    ],
+    [
+      "él／ella／usted está",
+      "他／她／您在"
+    ],
+    [
+      "nosotros estamos",
+      "我們在"
+    ],
+    [
+      "vosotros estáis",
+      "你們在（西班牙用）"
+    ],
+    [
+      "ellos／ellas／ustedes están",
+      "他們／她們／你們在"
+    ]
+  ],
+  "examples": [
+    {
+      "es": "Estoy en casa.",
+      "zh": "我在家。",
+      "tatoeba": 1013884
+    },
+    {
+      "es": "Estoy un poco cansado.",
+      "zh": "我有點累。",
+      "tatoeba": 490274
+    },
+    {
+      "es": "¿Tom está enfermo?",
+      "zh": "湯姆生病了嗎？",
+      "tatoeba": 2409258
+    }
+  ],
+  "mistake": {
+    "wrong": "Soy muy cansado.",
+    "why": "累是現在的狀態，不是身分，要用 estar：Estoy muy cansado.",
+    "right": "Estoy muy cansado.",
+    "tatoeba": 377265
+  },
+  "notes": [
+    "對照：Soy de Taiwán.（我來自臺灣，是身分）／Estoy en Taiwán.（我現在在臺灣，是位置）。",
+    "問好用 estar：¿Cómo estás? 回答 Estoy bien.；bien、mal 一律搭 estar。"
+  ],
+  "drills": [
+    {
+      "id": "u04-paris",
+      "type": "choice",
+      "es": "¿Dónde ___ París?",
+      "options": [
+        "está",
+        "están"
+      ],
+      "answer": "está",
+      "zh": "巴黎在哪裡？",
+      "why": "París 是單數，estar 用 está。",
+      "tatoeba": 330028
+    },
+    {
+      "id": "u04-botas",
+      "type": "choice",
+      "es": "¿Dónde ___ mis botas?",
+      "options": [
+        "están",
+        "está"
+      ],
+      "answer": "están",
+      "zh": "我的靴子在哪裡？",
+      "why": "botas 是複數（他們），estar 用 están。",
+      "tatoeba": 3034977
+    },
+    {
+      "id": "u04-casa-aqui",
+      "type": "choice",
+      "es": "Mi casa ___ aquí.",
+      "options": [
+        "está",
+        "es"
+      ],
+      "answer": "está",
+      "zh": "我家在這裡。",
+      "why": "說房子「在」哪裡，是位置，用 estar。",
+      "tatoeba": 1275958
+    },
+    {
+      "id": "u04-ocupado",
+      "type": "choice",
+      "es": "Mi padre ___ ocupado.",
+      "options": [
+        "está",
+        "es"
+      ],
+      "answer": "está",
+      "zh": "我爸爸很忙。",
+      "why": "忙是現在的狀態，用 estar。",
+      "tatoeba": 605712
+    },
+    {
+      "id": "u04-alto",
+      "type": "choice",
+      "es": "Él ___ alto.",
+      "options": [
+        "es",
+        "está"
+      ],
+      "answer": "es",
+      "zh": "他很高。",
+      "why": "高是本來的特徵，用 ser。",
+      "tatoeba": 1419080,
+      "zhSrc": "ai"
+    },
+    {
+      "id": "u04-enfermo",
+      "type": "choice",
+      "es": "Él ___ enfermo.",
+      "options": [
+        "está",
+        "es"
+      ],
+      "answer": "está",
+      "zh": "他生病了。",
+      "why": "生病是現在的狀態，用 estar。",
+      "tatoeba": 758098
+    },
+    {
+      "id": "u04-estoy-bien",
+      "type": "choice",
+      "es": "___ bien, gracias.",
+      "options": [
+        "Estoy",
+        "Soy"
+      ],
+      "answer": "Estoy",
+      "zh": "我很好，謝謝。",
+      "why": "bien（好）說的是現在的狀態，要用 estar；主詞 yo 的 estar 是 estoy。",
+      "tatoeba": 493008
+    },
+    {
+      "id": "u04-doctora",
+      "type": "choice",
+      "es": "Mi hermana ___ doctora.",
+      "options": [
+        "es",
+        "está"
+      ],
+      "answer": "es",
+      "zh": "我姊姊是醫生。",
+      "why": "職業是身分，用 ser。",
+      "src": "ai"
+    },
+    {
+      "id": "u04-fill-estoy-cansado",
+      "type": "fill",
+      "es": "___ cansado.",
+      "hint": "estar，主詞 yo",
+      "answer": [
+        "Estoy"
+      ],
+      "zh": "我很累。",
+      "why": "主詞 yo 的 estar 是 estoy。",
+      "tatoeba": 436444
+    },
+    {
+      "id": "u04-fill-estas-ahora",
+      "type": "fill",
+      "es": "¿Dónde ___ ahora?",
+      "hint": "estar，主詞 tú",
+      "answer": [
+        "estás"
+      ],
+      "zh": "你現在在哪裡呢？",
+      "why": "主詞 tú 的 estar 是 estás，重音在 á。",
+      "tatoeba": 866372
+    },
+    {
+      "id": "u04-fill-no-esta-mal",
+      "type": "fill",
+      "es": "No ___ mal.",
+      "hint": "estar，第三人稱單數",
+      "answer": [
+        "está"
+      ],
+      "zh": "不錯。",
+      "why": "bien／mal 搭 estar：No está mal.（不錯）",
+      "tatoeba": 1322722
+    },
+    {
+      "id": "u04-fill-ellos-casa",
+      "type": "fill",
+      "es": "Ellos ___ en casa.",
+      "hint": "estar，主詞 ellos",
+      "answer": [
+        "están"
+      ],
+      "zh": "他們在家。",
+      "why": "主詞是 ellos（他們），estar 用 están。",
+      "src": "ai"
+    },
+    {
+      "id": "u04-order-lejos",
+      "type": "order",
+      "tokens": [
+        "Mi",
+        "casa",
+        "está",
+        "lejos",
+        "de",
+        "aquí."
+      ],
+      "alt": [],
+      "zh": "我家離這裡很遠。",
+      "why": "位置用 estar：Mi casa está lejos de aquí.",
+      "tatoeba": 571891
+    },
+    {
+      "id": "u04-order-ahora-no",
+      "type": "order",
+      "tokens": [
+        "Ahora",
+        "no",
+        "estoy",
+        "cansado."
+      ],
+      "alt": [],
+      "zh": "我現在不累。",
+      "why": "否定把 no 放在 estoy 前面：Ahora no estoy cansado.",
+      "tatoeba": 2344010
+    },
+    {
+      "id": "u04-order-cerca",
+      "type": "order",
+      "tokens": [
+        "Mi",
+        "casa",
+        "está",
+        "cerca",
+        "de",
+        "la",
+        "estación."
+      ],
+      "alt": [],
+      "zh": "我家離車站很近。",
+      "why": "說房子在哪裡用 estar，cerca de 是「靠近…」。",
+      "tatoeba": 540013
+    }
+  ]
+}

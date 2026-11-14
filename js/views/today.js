@@ -5,6 +5,8 @@ import { cardState } from "../words.js";
 import { shouldOfferSieve } from "../sieve.js";
 import { loadVerbs } from "../data.js";
 import { verbDueCount } from "../verbDrill.js";
+import { loadGrammar } from "../data.js";
+import { grammarDueCount } from "../grammar.js";
 
 export async function renderToday(root, ctx) {
   const { store, vocab } = ctx;
@@ -17,6 +19,9 @@ export async function renderToday(root, ctx) {
   const total = t.queue.length;
   let verbDue = null; // 動詞練習到期幾張；動詞資料讀不到就不顯示這一行（不影響單字複習）
   try { verbDue = verbDueCount(cards, (await loadVerbs()).verbs, now); } catch (e) { console.error(e); }
+
+  let grammarDue = null; // 文法複習到期幾題；文法資料讀不到就不顯示這一行（不影響單字與動詞）
+  try { const g = await loadGrammar(); grammarDue = grammarDueCount({ units: g.units, unitData: g.unitData, cards, settings, now }); } catch (e) { console.error(e); }
 
   const line = total === 0
     ? h("p", { class: "today-line" }, "今天的字都複習完了。")
@@ -33,6 +38,8 @@ export async function renderToday(root, ctx) {
     // 不能把 null 交給 append（DOM 會把它變成字串 "null"），所以用展開的陣列
     ...(verbDue === null ? [] : [h("a", { class: "gender-entry verb-entry", href: "#/verb-drill" },
       h("span", {}, "動詞：到期 ", h("b", {}, verbDue), " 張"), h("span", { class: "chev", "aria-hidden": "true" }, "›"))]),
+    ...(grammarDue === null ? [] : [h("a", { class: "gender-entry verb-entry", href: "#/grammar-review" },
+      h("span", {}, "文法：到期 ", h("b", {}, grammarDue), " 題"), h("span", { class: "chev", "aria-hidden": "true" }, "›"))]),
     h("div", { class: "today-foot" },
       h("div", { class: "bar", role: "img", "aria-label": `已學 ${learned} 個，共 ${vocab.length} 個` }, h("i", { style: `width:${(learned / vocab.length) * 100}%` })),
       h("p", { class: "muted small" }, `已學 ${learned} ／ ${vocab.length}　　記熟 ${known}`)),

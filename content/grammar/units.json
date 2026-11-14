@@ -1,0 +1,116 @@
+[
+  {
+    "id": "u01",
+    "level": "A1",
+    "title": "字母、發音與重音",
+    "ready": true
+  },
+  {
+    "id": "u02",
+    "level": "A1",
+    "title": "名詞的性與數、冠詞",
+    "ready": true
+  },
+  {
+    "id": "u03",
+    "level": "A1",
+    "title": "主詞代名詞與 ser",
+    "ready": true
+  },
+  {
+    "id": "u04",
+    "level": "A1",
+    "title": "estar：在哪裡、現在怎麼樣",
+    "ready": true
+  },
+  {
+    "id": "u05",
+    "level": "A1",
+    "title": "hay 和 estar",
+    "ready": true
+  },
+  {
+    "id": "u06",
+    "level": "A1",
+    "title": "-ar 動詞現在式",
+    "ready": false
+  },
+  {
+    "id": "u07",
+    "level": "A1",
+    "title": "-er、-ir 動詞現在式",
+    "ready": false
+  },
+  {
+    "id": "u08",
+    "level": "A1",
+    "title": "形容詞的性數與位置",
+    "ready": false
+  },
+  {
+    "id": "u27",
+    "level": "A1",
+    "title": "指示詞與所有格",
+    "ready": false
+  },
+  {
+    "id": "u09",
+    "level": "A1–A2",
+    "title": "tener",
+    "ready": false
+  },
+  {
+    "id": "u28",
+    "level": "A1",
+    "title": "數字與程度",
+    "ready": false
+  },
+  {
+    "id": "u10",
+    "level": "A1–A2",
+    "title": "ir 與 ir a ＋原形",
+    "ready": false
+  },
+  {
+    "id": "u11",
+    "level": "A2",
+    "title": "詞根變化動詞",
+    "ready": false
+  },
+  {
+    "id": "u12",
+    "level": "A2",
+    "title": "第一人稱不規則動詞",
+    "ready": false
+  },
+  {
+    "id": "u13",
+    "level": "A1",
+    "title": "反身動詞與日常作息",
+    "ready": false
+  },
+  {
+    "id": "u19",
+    "level": "A2",
+    "title": "estar ＋現在分詞",
+    "ready": false
+  },
+  {
+    "id": "u14",
+    "level": "A1–A2",
+    "title": "gustar",
+    "ready": false
+  },
+  {
+    "id": "u15",
+    "level": "A1",
+    "title": "疑問詞",
+    "ready": false
+  },
+  {
+    "id": "u29",
+    "level": "A1",
+    "title": "把句子接起來",
+    "ready": false
+  }
+]

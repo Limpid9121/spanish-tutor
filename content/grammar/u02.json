@@ -1,0 +1,286 @@
+{
+  "id": "u02",
+  "level": "A1",
+  "title": "名詞的性與數、冠詞",
+  "src": "ai",
+  "rule": "西文的名詞不是陽性就是陰性：陽性前面用 el／un，陰性用 la／una；複數加 -s（母音結尾）或 -es（子音結尾）。",
+  "table": [
+    [
+      "el／un",
+      "陽性單數：el libro、un libro"
+    ],
+    [
+      "la／una",
+      "陰性單數：la casa、una casa"
+    ],
+    [
+      "los／unos",
+      "陽性複數：los libros、unos libros"
+    ],
+    [
+      "las／unas",
+      "陰性複數：las casas、unas casas"
+    ],
+    [
+      "al",
+      "a ＋ el 合在一起：Voy al parque."
+    ],
+    [
+      "del",
+      "de ＋ el 合在一起：el libro del profesor"
+    ]
+  ],
+  "examples": [
+    {
+      "es": "Quiero un café.",
+      "zh": "我想要一杯咖啡。",
+      "tatoeba": 2295338
+    },
+    {
+      "es": "¿Dónde están los libros?",
+      "zh": "書在哪裡？",
+      "tatoeba": 5526995
+    },
+    {
+      "es": "Voy al aeropuerto.",
+      "zh": "我去機場。",
+      "tatoeba": 6992416
+    }
+  ],
+  "mistake": {
+    "wrong": "Tengo una coche.",
+    "why": "coche 是陽性（-e 結尾的字要連冠詞一起記），要用 un。",
+    "right": "Tengo un coche.",
+    "tatoeba": 549321
+  },
+  "notes": [
+    "例外要連冠詞一起背：la mano、la foto、la moto（-o 結尾卻是陰性）；el día、el mapa（-a 結尾卻是陽性）。字尾是 -e 或子音的字大多沒有規則，例如 el padre、la madre、el coche、la noche；但 -ción、-dad 結尾的字幾乎都是陰性（la estación、la ciudad）。",
+    "複數：libro → libros、país → países、ciudad → ciudades；字尾是 z 的，把 z 換成 c 再加 -es（lápiz → lápices）。",
+    "只有 a／de 後面接 el 才會合體成 al／del；後面是 la、los、las 就不合體：a la tienda、de las mujeres。"
+  ],
+  "drills": [
+    {
+      "id": "u02-la-cocina",
+      "type": "choice",
+      "es": "Mi madre está en ___ cocina.",
+      "options": [
+        "la",
+        "el"
+      ],
+      "answer": "la",
+      "zh": "我媽媽在廚房裡。",
+      "why": "cocina 是陰性（-a 結尾），單數用 la。",
+      "tatoeba": 634729
+    },
+    {
+      "id": "u02-el-gato",
+      "type": "choice",
+      "es": "___ gato es negro.",
+      "options": [
+        "El",
+        "La"
+      ],
+      "answer": "El",
+      "zh": "貓是黑色的。",
+      "why": "gato 是陽性（-o 結尾），單數用 el。",
+      "tatoeba": 1107288
+    },
+    {
+      "id": "u02-las-manzanas",
+      "type": "choice",
+      "es": "¿Dónde están ___ manzanas?",
+      "options": [
+        "las",
+        "los"
+      ],
+      "answer": "las",
+      "zh": "蘋果在哪裡？",
+      "why": "manzanas 是陰性複數，要用 las。",
+      "tatoeba": 1063538
+    },
+    {
+      "id": "u02-los-gatos",
+      "type": "choice",
+      "es": "Me gustan ___ gatos.",
+      "options": [
+        "los",
+        "las"
+      ],
+      "answer": "los",
+      "zh": "我喜歡貓。",
+      "why": "gatos 是陽性複數，要用 los。",
+      "tatoeba": 582287
+    },
+    {
+      "id": "u02-un-perro",
+      "type": "choice",
+      "es": "Tengo ___ perro.",
+      "options": [
+        "un",
+        "una"
+      ],
+      "answer": "un",
+      "zh": "我有一隻狗。",
+      "why": "perro 是陽性，「一隻」用 un。",
+      "tatoeba": 755342,
+      "zhSrc": "ai"
+    },
+    {
+      "id": "u02-una-hija",
+      "type": "choice",
+      "es": "Tengo ___ hija.",
+      "options": [
+        "una",
+        "un"
+      ],
+      "answer": "una",
+      "zh": "我有一個女兒。",
+      "why": "hija 是陰性，「一個」用 una。",
+      "tatoeba": 745307
+    },
+    {
+      "id": "u02-el-dia",
+      "type": "choice",
+      "es": "Hoy es ___ día bonito.",
+      "options": [
+        "un",
+        "una"
+      ],
+      "answer": "un",
+      "zh": "今天是個美好的日子。",
+      "why": "día 雖然是 -a 結尾，卻是陽性，要用 un（例外要連冠詞一起背）。",
+      "src": "ai"
+    },
+    {
+      "id": "u02-la-mano",
+      "type": "choice",
+      "es": "Tengo ___ mano fría.",
+      "options": [
+        "la",
+        "el"
+      ],
+      "answer": "la",
+      "zh": "我的手很冰。",
+      "why": "mano 雖然是 -o 結尾，卻是陰性，要用 la（例外要連冠詞一起背）。",
+      "src": "ai"
+    },
+    {
+      "id": "u02-fill-hermanos",
+      "type": "fill",
+      "es": "Tengo dos ___.",
+      "hint": "hermano 的複數",
+      "answer": [
+        "hermanos"
+      ],
+      "zh": "我有兩個兄弟。",
+      "why": "hermano 以母音結尾，複數直接加 -s：hermanos。",
+      "tatoeba": 574235
+    },
+    {
+      "id": "u02-fill-paises",
+      "type": "fill",
+      "es": "¿Cuántos ___ hay en África?",
+      "hint": "país 的複數",
+      "answer": [
+        "países"
+      ],
+      "zh": "非洲有幾個國家？",
+      "why": "país 以 s 結尾，複數加 -es；í 上的重音符號保留：países。",
+      "tatoeba": 1820865
+    },
+    {
+      "id": "u02-fill-ciudades",
+      "type": "fill",
+      "es": "No me gustan las grandes ___.",
+      "hint": "ciudad 的複數",
+      "answer": [
+        "ciudades"
+      ],
+      "zh": "我不喜歡大城市。",
+      "why": "ciudad 以子音結尾，複數加 -es：ciudades。",
+      "tatoeba": 982943
+    },
+    {
+      "id": "u02-al-parque",
+      "type": "choice",
+      "es": "Voy ___ parque.",
+      "options": [
+        "al",
+        "a la"
+      ],
+      "answer": "al",
+      "zh": "我去公園。",
+      "why": "parque 是陽性，a ＋ el 要合成 al。",
+      "tatoeba": 450251
+    },
+    {
+      "id": "u02-a-la-tienda",
+      "type": "choice",
+      "es": "Voy ___ tienda.",
+      "options": [
+        "a la",
+        "al"
+      ],
+      "answer": "a la",
+      "zh": "我去商店。",
+      "why": "tienda 是陰性，用 a la，不會合體。",
+      "tatoeba": 654930
+    },
+    {
+      "id": "u02-al-cine",
+      "type": "choice",
+      "es": "¿Vamos ___ cine?",
+      "options": [
+        "al",
+        "a la"
+      ],
+      "answer": "al",
+      "zh": "我們去電影院嗎？",
+      "why": "cine 是陽性，a ＋ el 要合成 al。",
+      "tatoeba": 1017617
+    },
+    {
+      "id": "u02-del-profesor",
+      "type": "choice",
+      "es": "Ella siempre se queja ___ profesor.",
+      "options": [
+        "del",
+        "de la"
+      ],
+      "answer": "del",
+      "zh": "她總是抱怨老師。",
+      "why": "profesor 是陽性，de ＋ el 要合成 del。",
+      "tatoeba": 1316104
+    },
+    {
+      "id": "u02-order-perro-gato",
+      "type": "order",
+      "tokens": [
+        "Tengo",
+        "un",
+        "perro",
+        "y",
+        "un",
+        "gato."
+      ],
+      "alt": [],
+      "zh": "我有一隻狗和一隻貓。",
+      "why": "un 搭陽性 perro 和 gato；用 y 把兩個名詞接起來。",
+      "tatoeba": 1286101
+    },
+    {
+      "id": "u02-order-manzanas",
+      "type": "order",
+      "tokens": [
+        "Las",
+        "manzanas",
+        "son",
+        "rojas."
+      ],
+      "alt": [],
+      "zh": "蘋果是紅色的。",
+      "why": "Las manzanas 是陰性複數，形容詞跟著變成 rojas。",
+      "tatoeba": 540313
+    }
+  ]
+}

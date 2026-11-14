@@ -319,3 +319,55 @@ button.row, a.row { width: 100%; background: none; border-left: 0; border-right:
 .ac.x.miss { background: var(--tint-hard); }
 .ac.x.err { background: var(--tint-again); }
 .verb-drill-entry { margin: 16px 0 8px; } /* 動詞分頁「練習變化」入口，跟說明文字隔開 */
+
+/* 文法（第 3a 批） */
+.gm-intro { margin: -12px 0 14px; }
+.gm-review { margin: 0 0 12px; }
+.gm-list { list-style: none; margin: 0; padding: 0; }
+.gm-row { display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 8px 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--text); }
+.gm-row.later { opacity: .45; cursor: default; }
+.gm-n { flex: 0 0 1.6em; color: var(--text-2); font-family: var(--serif); font-size: 1.0625rem; font-variant-numeric: tabular-nums; }
+.gm-t { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.gm-title { font-size: 1.0625rem; overflow-wrap: anywhere; }
+.gm-t small { color: var(--text-2); font-size: .75rem; letter-spacing: .06em; }
+.gm-st { flex: none; font-size: .75rem; letter-spacing: .06em; color: var(--text-2); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); }
+.gm-st.st-done { background: var(--tint-good); border-color: transparent; color: var(--text); }
+.gm-st.st-started { background: var(--tint-hard); border-color: transparent; color: var(--text); }
+.gm-st.st-skipped { background: var(--tint-easy); border-color: transparent; color: var(--text); }
+.gm-st.st-later { border-style: dashed; }
+
+.ut-title { margin: 0 0 14px; }
+.ut-rule { font-size: 1.25rem; line-height: 1.7; margin: 0 0 20px; }
+.ut-table { margin: 0 0 8px; }
+.ut-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; min-height: 52px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.ut-row.dim { opacity: .55; }
+.ut-l { flex: 0 0 auto; max-width: 100%; font-family: var(--serif); font-size: 1.25rem; overflow-wrap: anywhere; }
+.ut-r { flex: 1 1 8em; min-width: 0; color: var(--text-2); font-size: .9375rem; line-height: 1.5; }
+.ut-words { flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 8px; }
+.ut-word { display: inline-flex; align-items: center; gap: 6px; font-family: var(--serif); font-size: 1.125rem; }
+.ut-mistake { margin: 8px 0 0; }
+.ut-wrong { font-family: var(--serif); font-size: 1.1875rem; margin: 0; color: var(--text-2); overflow-wrap: anywhere; }
+.ut-wrong s { text-decoration-thickness: 1.5px; }
+.ut-right { margin-top: 12px; }
+.mk { flex: none; font-family: var(--sans); font-size: 1rem; }
+.ut-src { margin: 24px 0 0; }
+.ut-actions { display: grid; gap: 10px; margin: 20px 0 0; }
+
+.gdrill-wrap .rv-card > * { flex-shrink: 0; } /* 內容比畫面長時捲動，不要互相擠壓重疊（375×667 驗收發現） */
+.gd-sentence { font-family: var(--serif); font-size: clamp(1.5rem, 7vw, 2rem); line-height: 1.4; margin: 4px 0 0; overflow-wrap: anywhere; }
+.gd-blank { display: inline-block; min-width: 3.2em; border-bottom: 2px solid var(--text); margin: 0 .1em; }
+.gd-hint { margin: 10px 0 0; font-size: .9375rem; }
+.gd-opt { font-family: var(--serif); font-size: 1.25rem; }
+.gd-result { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
+.gd-full { margin-top: 0; }
+.gd-why { color: var(--text-2); font-size: .9375rem; line-height: 1.7; margin: 14px 0 0; }
+.gd-line { display: flex; flex-wrap: wrap; align-content: flex-start; gap: 8px; min-height: 76px; padding: 12px 0; margin-top: 8px; border-bottom: 2px solid var(--line); }
+.gd-line-empty { color: var(--text-2); font-size: .9375rem; align-self: center; }
+.gd-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.ord-tok { min-height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--text); font-family: var(--serif); font-size: 1.1875rem; }
+.ord-tok.on { background: var(--tint-good); border-color: var(--accent); }
+.ord-tok.on.bad { background: var(--tint-again); border-color: var(--text-2); } /* 排錯了：不能看起來像答對 */
+.ord-tok.used { opacity: .3; }
+.ord-tok:disabled { cursor: default; color: var(--text); }
+.ord-tok:not(:disabled):active { transform: scale(.97); }
+.gd-ord-actions { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; }

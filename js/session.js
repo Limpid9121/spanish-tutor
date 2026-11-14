@@ -6,6 +6,7 @@ export const DEFAULT_SETTINGS = {
   sources: { textbook: true, spoken: true, news: true, social: true },
   answerMode: { r: "type", f: "choice" }, // 作答方式（第 1.3 批）：看中文的卡 type 打字／flip 翻面；看西文的卡 choice 選擇題／flip 翻面
   newVerbsPerDay: 3, verbVosotros: false, // 動詞變化練習（第 2b 批）：每天新動詞幾個、練習要不要出 vosotros
+  unitSkip: {}, // 文法單元（第 3a 批）：他按了「我會了」的單元 { 單元id: true }，跟備份走
   familiarOverride: {}, // 他自己改的「已熟悉」：{ 字id: true（已熟悉，不進新字）／false（加回學習） }，蓋過內容裡的預設 familiar
 };
 
@@ -114,7 +115,9 @@ export function buildToday({ vocab, cards, settings, now = new Date(), introduce
 
 // 回答一張卡：回傳 { rec, requeue }。rec 為 null（新卡）時從空白卡開始。
 export function answer({ item, rec, grade, now = new Date() }) {
-  const base = rec ?? (item.dir === "v" ? newVerbRecord(item.wordId, item.tense, now) : newRecord(item.wordId, item.dir, now));
+  const base = rec ?? (item.dir === "v" ? newVerbRecord(item.wordId, item.tense, now)
+    : item.dir === "u" ? { ...newRecord(item.wordId, "u", now), unit: item.unit } // 文法題卡帶單元，備份還原後找得回來
+    : newRecord(item.wordId, item.dir, now));
   const next = review(base, grade, now);
   return { rec: next, requeue: shouldRequeue(next, now) };
 }
@@ -125,7 +128,7 @@ export async function gradeCard({ store, cards, item, grade, now = new Date() })
   await store.saveCard(rec);
   await store.addLog({ id: `${now.getTime()}-${item.id}`, cardId: item.id, grade, at: now.getTime() });
   if (item.isNew) { // 動詞卡另外計數（key 是 new:v-日期，跟備份走）；一個新動詞有兩張新卡，只在現在式那張算 1 個
-    if (item.dir !== "v") await store.bumpNew(dayKey(now));
+    if (item.dir === "f" || item.dir === "r") await store.bumpNew(dayKey(now)); // 只有單字卡算每日新字；文法題（u）、陰陽性（g，自己的流程不經過這裡）都不算
     else if (item.tense === "pres") await store.bumpNew(`v-${dayKey(now)}`);
   }
   cards.set(rec.id, rec);

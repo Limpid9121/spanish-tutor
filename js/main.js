@@ -13,6 +13,7 @@ import { renderSieve } from "./views/sieve.js";
 import { renderGender, renderGenderDrill } from "./views/gender.js";
 import { renderVerbs, renderVerb } from "./views/verbs.js";
 import { renderVerbDrill } from "./views/verbDrill.js";
+import { renderGrammar, renderUnit, renderUnitDrill, renderGrammarReview } from "./views/grammar.js";
 
 const app = document.getElementById("app");
 const ctx = {
@@ -34,7 +35,7 @@ async function route() {
   if (cleanup) { try { cleanup(); } catch { /* 忽略 */ } cleanup = null; }
   const { name, arg } = parse();
   const root = h("div");
-  const tab = { today: "today", review: "today", vocab: "vocab", word: "vocab", gender: "vocab", "gender-drill": "vocab", settings: "settings", credits: "settings", sieve: "settings", verbs: "verbs", verb: "verbs", "verb-drill": "verbs" }[name] ?? "today";
+  const tab = { today: "today", review: "today", vocab: "vocab", word: "vocab", gender: "vocab", "gender-drill": "vocab", settings: "settings", credits: "settings", sieve: "settings", verbs: "verbs", verb: "verbs", "verb-drill": "verbs", grammar: "grammar", unit: "grammar", "unit-drill": "grammar", "grammar-review": "grammar" }[name] ?? "today";
   document.querySelectorAll("#tabbar a").forEach((a) => {
     if (a.dataset.tab === tab) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
   });
@@ -47,6 +48,10 @@ async function route() {
     else if (name === "verbs") c = await renderVerbs(root, ctx);
     else if (name === "verb") c = await renderVerb(root, ctx, arg);
     else if (name === "verb-drill") c = await renderVerbDrill(root, ctx);
+    else if (name === "grammar") c = await renderGrammar(root, ctx);
+    else if (name === "unit") c = await renderUnit(root, ctx, arg);
+    else if (name === "unit-drill") c = await renderUnitDrill(root, ctx, arg);
+    else if (name === "grammar-review") c = await renderGrammarReview(root, ctx);
     else if (name === "review") c = await renderReview(root, ctx);
     else if (name === "settings") c = await renderSettings(root, ctx);
     else if (name === "credits") c = await renderCredits(root, ctx);
@@ -54,7 +59,7 @@ async function route() {
     else c = await renderToday(root, ctx);
     if (token !== navToken) { if (typeof c === "function") c(); return; }
     cleanup = typeof c === "function" ? c : null;
-    if (name !== "review" && name !== "sieve" && name !== "verb-drill") document.body.classList.remove("in-review");
+    if (name !== "review" && name !== "sieve" && name !== "verb-drill" && name !== "unit-drill" && name !== "grammar-review") document.body.classList.remove("in-review");
     app.replaceChildren(root);
     window.scrollTo(0, 0);
   } catch (e) {

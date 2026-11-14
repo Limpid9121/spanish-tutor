@@ -1,0 +1,268 @@
+{
+  "id": "u05",
+  "level": "A1",
+  "title": "hay 和 estar",
+  "src": "ai",
+  "rule": "hay 說某處「有」什麼（第一次提到，前面不放 el／la）；estar 說某個已經知道的人或東西「在」哪裡。",
+  "table": [
+    [
+      "hay",
+      "某處「有」什麼（第一次提到）；沒有人稱變化，單複數都用 hay"
+    ],
+    [
+      "estar",
+      "已知的人或東西「在」哪裡；要照主詞變化（está、están…）"
+    ]
+  ],
+  "examples": [
+    {
+      "es": "Hay un libro sobre la mesa.",
+      "zh": "桌子上有本書。",
+      "tatoeba": 541351
+    },
+    {
+      "es": "El libro está sobre la mesa.",
+      "zh": "書在桌子上。",
+      "tatoeba": 2345963
+    }
+  ],
+  "mistake": {
+    "wrong": "Hay el libro sobre la mesa.",
+    "why": "hay 後面不接 el／la；已經知道是哪一本書，要說它「在」哪裡，用 estar。",
+    "right": "El libro está sobre la mesa.",
+    "tatoeba": 2345963
+  },
+  "notes": [
+    "hay 後面的名詞前面用 un／una／數字或不加冠詞，不接 el／la：Hay un libro. Hay dos libros.",
+    "問「有沒有」用 ¿Hay …?；問「在哪裡」用 ¿Dónde está …?。"
+  ],
+  "drills": [
+    {
+      "id": "u05-hay-hospital",
+      "type": "choice",
+      "es": "¿___ un hospital cerca de aquí?",
+      "options": [
+        "Hay",
+        "Está"
+      ],
+      "answer": "Hay",
+      "zh": "這附近有醫院嗎？",
+      "why": "你在問附近「有沒有」醫院，用 hay。",
+      "tatoeba": 580571
+    },
+    {
+      "id": "u05-esta-biblioteca",
+      "type": "choice",
+      "es": "La biblioteca ___ a la derecha.",
+      "options": [
+        "hay",
+        "está"
+      ],
+      "answer": "está",
+      "zh": "圖書館在右手邊。",
+      "why": "你在說圖書館（已知的地方）的位置，用 está。",
+      "tatoeba": 462767
+    },
+    {
+      "id": "u05-hay-telefono",
+      "type": "choice",
+      "es": "___ un teléfono en el pasillo.",
+      "options": [
+        "Hay",
+        "Está"
+      ],
+      "answer": "Hay",
+      "zh": "走廊裡有一部電話。",
+      "why": "你在介紹走廊裡「有」什麼，用 hay。",
+      "tatoeba": 634369
+    },
+    {
+      "id": "u05-esta-estacion",
+      "type": "choice",
+      "es": "¿Dónde ___ la estación?",
+      "options": [
+        "hay",
+        "está"
+      ],
+      "answer": "está",
+      "zh": "火車站在哪裡？",
+      "why": "你問的是車站（已知的地方）在哪裡，用 está。",
+      "tatoeba": 730471
+    },
+    {
+      "id": "u05-hay-manzana",
+      "type": "choice",
+      "es": "___ una manzana sobre el pupitre.",
+      "options": [
+        "Hay",
+        "Está"
+      ],
+      "answer": "Hay",
+      "zh": "書桌上有一個蘋果。",
+      "why": "介紹書桌上「有」一個蘋果（un 開頭，第一次提到），用 hay。",
+      "tatoeba": 329986
+    },
+    {
+      "id": "u05-hay-habitacion",
+      "type": "choice",
+      "es": "¿___ alguien en la habitación?",
+      "options": [
+        "Hay",
+        "Está"
+      ],
+      "answer": "Hay",
+      "zh": "房間裡有人嗎？",
+      "why": "問房間裡「有沒有」人，用 hay。",
+      "tatoeba": 343503
+    },
+    {
+      "id": "u05-esta-libro",
+      "type": "choice",
+      "es": "Tu libro ___ aquí.",
+      "options": [
+        "está",
+        "hay"
+      ],
+      "answer": "está",
+      "zh": "你的書在這裡。",
+      "why": "Tu libro（你的書）是已知的東西，說它在哪裡用 está。",
+      "tatoeba": 2042217
+    },
+    {
+      "id": "u05-estan-cosas",
+      "type": "choice",
+      "es": "¿Dónde ___ tus cosas?",
+      "options": [
+        "están",
+        "hay"
+      ],
+      "answer": "están",
+      "zh": "你的東西在哪裡？",
+      "why": "tus cosas（你的東西）是已知的，說它們在哪裡用 están。",
+      "tatoeba": 343724
+    },
+    {
+      "id": "u05-hay-agua",
+      "type": "choice",
+      "es": "No ___ agua.",
+      "options": [
+        "hay",
+        "está"
+      ],
+      "answer": "hay",
+      "zh": "沒有水。",
+      "why": "說「沒有水」是在說有沒有，用 no hay。",
+      "tatoeba": 1672070
+    },
+    {
+      "id": "u05-hay-banco",
+      "type": "choice",
+      "es": "___ un banco frente a la estación.",
+      "options": [
+        "Hay",
+        "Está"
+      ],
+      "answer": "Hay",
+      "zh": "車站前有個銀行。",
+      "why": "介紹車站前「有」一間銀行（un 開頭，第一次提到），用 hay。",
+      "tatoeba": 336844
+    },
+    {
+      "id": "u05-esta-tom",
+      "type": "choice",
+      "es": "Tom ___ en casa.",
+      "options": [
+        "está",
+        "hay"
+      ],
+      "answer": "está",
+      "zh": "湯姆在家裡。",
+      "why": "Tom 是已知的人，說他在哪裡用 está。",
+      "tatoeba": 1585303
+    },
+    {
+      "id": "u05-fill-hay-alguien",
+      "type": "fill",
+      "es": "¿___ alguien aquí?",
+      "hint": "hay 還是 estar？",
+      "answer": [
+        "Hay"
+      ],
+      "zh": "這裡有人嗎？",
+      "why": "問這裡「有沒有」人，用 hay（沒有人稱變化）。",
+      "tatoeba": 1061016
+    },
+    {
+      "id": "u05-fill-esta-maria",
+      "type": "fill",
+      "es": "¿Dónde ___ María?",
+      "hint": "hay 還是 estar？",
+      "answer": [
+        "está"
+      ],
+      "zh": "瑪麗在哪裡？",
+      "why": "María 是已知的人，問她在哪裡用 está。",
+      "tatoeba": 1792035
+    },
+    {
+      "id": "u05-fill-no-hay-error",
+      "type": "fill",
+      "es": "No ___ error.",
+      "hint": "hay 還是 estar？",
+      "answer": [
+        "hay"
+      ],
+      "zh": "沒有錯誤。",
+      "why": "「沒有錯誤」是在說有沒有，用 no hay。",
+      "tatoeba": 4544055
+    },
+    {
+      "id": "u05-order-no-hay-libros",
+      "type": "order",
+      "tokens": [
+        "No",
+        "hay",
+        "muchos",
+        "libros",
+        "en",
+        "estas",
+        "estanterías."
+      ],
+      "alt": [],
+      "zh": "這些書架上沒有很多書。",
+      "why": "no hay 後面接沒有冠詞的複數名詞：No hay muchos libros.",
+      "tatoeba": 336828
+    },
+    {
+      "id": "u05-order-hay-unos-libros",
+      "type": "order",
+      "tokens": [
+        "Hay",
+        "unos",
+        "libros",
+        "encima",
+        "de",
+        "la",
+        "mesa."
+      ],
+      "alt": [],
+      "zh": "書桌上有幾本書。",
+      "why": "hay 後面接 unos 加名詞，不接 los。",
+      "tatoeba": 751692
+    },
+    {
+      "id": "u05-order-donde-casa",
+      "type": "order",
+      "tokens": [
+        "¿Dónde",
+        "está",
+        "tu",
+        "casa?"
+      ],
+      "alt": [],
+      "zh": "你家在哪裡？",
+      "why": "問已知的東西在哪裡：¿Dónde está tu casa?",
+      "tatoeba": 442198
+    }
+  ]
+}

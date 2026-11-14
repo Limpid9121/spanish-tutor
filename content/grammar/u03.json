@@ -1,0 +1,232 @@
+{
+  "id": "u03",
+  "level": "A1",
+  "title": "主詞代名詞與 ser",
+  "src": "ai",
+  "rule": "ser 是「是」，用來說身分、國籍、職業、從哪裡來；西文動詞的變化已經帶著人稱，所以主詞（yo、tú…）通常省略，要對比時才說。",
+  "table": [
+    [
+      "yo soy",
+      "我是"
+    ],
+    [
+      "tú eres",
+      "你是"
+    ],
+    [
+      "él／ella／usted es",
+      "他／她／您是"
+    ],
+    [
+      "nosotros somos",
+      "我們是"
+    ],
+    [
+      "vosotros sois",
+      "你們是（西班牙用）"
+    ],
+    [
+      "ellos／ellas／ustedes son",
+      "他們／她們／你們是"
+    ]
+  ],
+  "examples": [
+    {
+      "es": "Soy estudiante.",
+      "zh": "我是學生。",
+      "tatoeba": 574254
+    },
+    {
+      "es": "Tú eres mi amigo.",
+      "zh": "你是我的朋友。",
+      "tatoeba": 584668
+    },
+    {
+      "es": "Ellos son rusos.",
+      "zh": "他們是俄羅斯人。",
+      "tatoeba": 1529476
+    }
+  ],
+  "mistake": {
+    "wrong": "Ellos es amigos.",
+    "why": "ellos 是複數「他們」，ser 要用 son，不能用 es。",
+    "right": "Ellos son amigos.",
+    "tatoeba": 6022741
+  },
+  "notes": [
+    "usted／ustedes 是比較客氣的「您／你們」，動詞跟 él／ella、ellos／ellas 一樣。",
+    "vosotros（你們）只有西班牙用，拉丁美洲用 ustedes；這個 App 先不考。",
+    "主詞通常省略：Soy estudiante. 比 Yo soy estudiante. 自然；要對比時才說：Yo soy estudiante, pero él no."
+  ],
+  "drills": [
+    {
+      "id": "u03-tu-eres",
+      "type": "choice",
+      "es": "Tú ___ mi amigo.",
+      "options": [
+        "eres",
+        "es"
+      ],
+      "answer": "eres",
+      "zh": "你是我的朋友。",
+      "why": "主詞是 tú，ser 的變化是 eres。",
+      "tatoeba": 584668
+    },
+    {
+      "id": "u03-ellos-son",
+      "type": "choice",
+      "es": "Ellos ___ rusos.",
+      "options": [
+        "son",
+        "somos"
+      ],
+      "answer": "son",
+      "zh": "他們是俄羅斯人。",
+      "why": "主詞是 ellos（他們），ser 用 son。",
+      "tatoeba": 1529476
+    },
+    {
+      "id": "u03-somos-amigos",
+      "type": "choice",
+      "es": "___ amigos.",
+      "options": [
+        "Somos",
+        "Soy"
+      ],
+      "answer": "Somos",
+      "zh": "我們是朋友。",
+      "why": "這句沒有主詞，但 somos 就是 nosotros（我們）。",
+      "tatoeba": 4910834
+    },
+    {
+      "id": "u03-yo-soy",
+      "type": "choice",
+      "es": "Yo ___ de Egipto.",
+      "options": [
+        "soy",
+        "es"
+      ],
+      "answer": "soy",
+      "zh": "我來自埃及。",
+      "why": "主詞是 yo，ser 的變化是 soy；Yo soy de… 說從哪裡來。",
+      "tatoeba": 436344
+    },
+    {
+      "id": "u03-usted-es",
+      "type": "choice",
+      "es": "Profesor, ¿usted ___ de México?",
+      "options": [
+        "es",
+        "eres"
+      ],
+      "answer": "es",
+      "zh": "老師，您是墨西哥人嗎？",
+      "why": "對老師用比較客氣的 usted，動詞跟 él／ella 一樣用 es。",
+      "src": "ai"
+    },
+    {
+      "id": "u03-fill-soy-estudiante",
+      "type": "fill",
+      "es": "___ estudiante.",
+      "hint": "ser，主詞 yo",
+      "answer": [
+        "Soy"
+      ],
+      "zh": "我是學生。",
+      "why": "主詞 yo 省略了，但 Soy 就是「我是」。",
+      "tatoeba": 574254
+    },
+    {
+      "id": "u03-fill-son-amigos",
+      "type": "fill",
+      "es": "¿Ellos ___ amigos?",
+      "hint": "ser，主詞 ellos",
+      "answer": [
+        "son"
+      ],
+      "zh": "他們是朋友嗎？",
+      "why": "主詞是 ellos，ser 要用 son。",
+      "tatoeba": 1681097
+    },
+    {
+      "id": "u03-fill-de-zambia",
+      "type": "fill",
+      "es": "Soy ___ Zambia.",
+      "hint": "介系詞，「從」",
+      "answer": [
+        "de"
+      ],
+      "zh": "我來自尚比亞。",
+      "why": "說從哪裡來用 ser ＋ de ＋ 地方：Soy de Zambia.",
+      "tatoeba": 505872
+    },
+    {
+      "id": "u03-fill-nosotros",
+      "type": "fill",
+      "es": "Nosotros ___ de Taiwán.",
+      "hint": "ser，主詞 nosotros",
+      "answer": [
+        "somos"
+      ],
+      "zh": "我們來自臺灣。",
+      "why": "主詞是 nosotros（我們），ser 要用 somos。",
+      "src": "ai"
+    },
+    {
+      "id": "u03-order-donde-eres",
+      "type": "order",
+      "tokens": [
+        "¿De",
+        "dónde",
+        "eres?"
+      ],
+      "alt": [],
+      "zh": "你是哪裡人？",
+      "why": "問「你是哪裡人」：¿De dónde eres?",
+      "tatoeba": 3071
+    },
+    {
+      "id": "u03-order-ellos-chinos",
+      "type": "order",
+      "tokens": [
+        "Ellos",
+        "no",
+        "son",
+        "chinos."
+      ],
+      "alt": [],
+      "zh": "他們不是中國人。",
+      "why": "否定把 no 放在 ser 前面：Ellos no son chinos.",
+      "tatoeba": 9238292
+    },
+    {
+      "id": "u03-order-universitario",
+      "type": "order",
+      "tokens": [
+        "Soy",
+        "estudiante",
+        "universitario."
+      ],
+      "alt": [],
+      "zh": "我是大學生。",
+      "why": "說職業或身分時，ser 後面不加冠詞：Soy estudiante universitario.",
+      "tatoeba": 568760
+    },
+    {
+      "id": "u03-order-contraste",
+      "type": "order",
+      "tokens": [
+        "Yo",
+        "soy",
+        "estudiante,",
+        "pero",
+        "él",
+        "no."
+      ],
+      "alt": [],
+      "zh": "我是學生，但是他不是。",
+      "why": "要對比時才說出主詞：Yo soy… pero él no.",
+      "tatoeba": 2869186
+    }
+  ]
+}

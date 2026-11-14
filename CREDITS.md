@@ -8,6 +8,7 @@
 - 授權：[CC BY 2.0 FR](https://creativecommons.org/licenses/by/2.0/fr/)。
 - 我們做的修改：只挑西文 12 個字以內的句子；中文用 OpenCC（s2twp）轉成台灣繁體；少數字詞人工修正。每個例句的資料裡都保留 Tatoeba 句子編號，可到 tatoeba.org 查到原作者。
 - 部分例句由 AI 依 Tatoeba 西文原句翻譯或重新翻譯，資料標記為 `zhSrc: "ai"`。有沿用中文句對時，資料保留對應的 Tatoeba 中文句號。
+- 文法單元的例句與練習題句子也優先用 Tatoeba（題目只是把句子挖掉一個字或打亂字序，西文原句不改，每題保留句子編號）；沒有合適句子才由 AI 自寫，資料標記為 `src: "ai"`。
 
 ## Wiktionary 衍生資料（單字詞形）
 

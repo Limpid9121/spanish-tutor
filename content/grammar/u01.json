@@ -1,0 +1,333 @@
+{
+  "id": "u01",
+  "level": "A1",
+  "title": "字母、發音與重音",
+  "src": "ai",
+  "rule": "西文大致看到什麼就念什麼；問句和驚嘆句前面要多寫倒過來的 ¿ ¡，有些字靠重音符號分辨意思。",
+  "table": [
+    [
+      "h",
+      "單獨的 h 不發音（拼字要寫，念的時候當它不存在）；ch 是例外，念成「ㄑ」",
+      [
+        "hola",
+        "hermano",
+        "noche"
+      ]
+    ],
+    [
+      "ll、y",
+      "發音很接近，像「ㄧ」帶一點摩擦的音",
+      [
+        "llamo",
+        "yo"
+      ]
+    ],
+    [
+      "j；ge、gi",
+      "都念成喉嚨摩擦的「ㄏ」",
+      [
+        "jamón",
+        "gente"
+      ]
+    ],
+    [
+      "g（ga、go、gu）",
+      "像「ㄍ」；gue、gui 裡的 u 不念",
+      [
+        "gato",
+        "guitarra"
+      ]
+    ],
+    [
+      "c、z",
+      "ca、co、cu 像「ㄎ」；ce、ci 和 z 像「ㄙ」（拉丁美洲的念法）",
+      [
+        "casa",
+        "cinco",
+        "zapato"
+      ]
+    ],
+    [
+      "qu",
+      "q 後面一定接 u，念「ㄎ」",
+      [
+        "que",
+        "queso"
+      ]
+    ],
+    [
+      "ñ",
+      "念成快速的「ni」",
+      [
+        "mañana",
+        "año"
+      ]
+    ],
+    [
+      "r、rr",
+      "字首的 r 和 rr：舌頭連續顫動（打嘟嚕）；字中間單一個 r：舌頭只輕彈一下",
+      [
+        "perro",
+        "caro"
+      ]
+    ],
+    [
+      "v、b",
+      "發音一樣，都像「ㄅ」",
+      [
+        "vaso",
+        "beber"
+      ]
+    ]
+  ],
+  "examples": [
+    {
+      "es": "¿Cómo estás?",
+      "zh": "你好嗎？",
+      "tatoeba": 397688
+    },
+    {
+      "es": "¡Qué bien!",
+      "zh": "很好！",
+      "tatoeba": 1863767
+    },
+    {
+      "es": "¿Qué hora es?",
+      "zh": "幾點了？",
+      "tatoeba": 2830
+    }
+  ],
+  "mistake": {
+    "wrong": "Quien eres?",
+    "why": "少了開頭的 ¿，Quién 的 é 也不能漏。",
+    "right": "¿Quién eres?",
+    "tatoeba": 356203
+  },
+  "notes": [
+    "有重音才是另一個字：tú（你）／tu（你的）、él（他）／el（冠詞）、sé（我知道）／se、té（茶）／te（你，當受詞）、qué（什麼）／que（連接詞，例如 creo que…）。",
+    "重音只要記一條：字尾是母音、n、s，重音在倒數第二個音節；其他字尾，重音在最後一個音節。不照這條念的字，才會多寫重音符號，例如 estación、lápiz。（PCIC A1 沒列，為了打字題補上。）",
+    "疑問詞一定要加重音：qué、quién、cómo、dónde、cuándo、cuánto。"
+  ],
+  "drills": [
+    {
+      "id": "u01-tu-eres",
+      "type": "choice",
+      "es": "¿___ eres Tom?",
+      "options": [
+        "Tú",
+        "Tu"
+      ],
+      "answer": "Tú",
+      "zh": "你是湯姆嗎？",
+      "why": "「你」當主詞要寫 Tú（有重音）；沒重音的 tu 是「你的」，後面要接名詞。",
+      "tatoeba": 1497026
+    },
+    {
+      "id": "u01-tu-padre",
+      "type": "choice",
+      "es": "___ padre es alto.",
+      "options": [
+        "Tu",
+        "Tú"
+      ],
+      "answer": "Tu",
+      "zh": "你爸爸很高。",
+      "why": "後面接名詞 padre，是「你的爸爸」，用沒有重音的 tu。",
+      "tatoeba": 445794
+    },
+    {
+      "id": "u01-el-casa",
+      "type": "choice",
+      "es": "___ está en casa.",
+      "options": [
+        "Él",
+        "El"
+      ],
+      "answer": "Él",
+      "zh": "他在家裡。",
+      "why": "「他」要寫 Él（有重音）；沒重音的 el 是冠詞，後面一定接名詞。",
+      "tatoeba": 1957979
+    },
+    {
+      "id": "u01-el-cafe",
+      "type": "choice",
+      "es": "___ café está frío.",
+      "options": [
+        "El",
+        "Él"
+      ],
+      "answer": "El",
+      "zh": "咖啡是冷的。",
+      "why": "El 後面接名詞 café，是冠詞，不加重音。",
+      "tatoeba": 462655
+    },
+    {
+      "id": "u01-se-nada",
+      "type": "choice",
+      "es": "No ___ nadar.",
+      "options": [
+        "sé",
+        "se"
+      ],
+      "answer": "sé",
+      "zh": "我不會游泳。",
+      "why": "「我知道、我會」是 sé（有重音）；沒重音的 se 是另一種字，例如 se llama 的 se。",
+      "tatoeba": 573705
+    },
+    {
+      "id": "u01-se-llaman",
+      "type": "choice",
+      "es": "___ llaman Tom y Ken.",
+      "options": [
+        "Se",
+        "Sé"
+      ],
+      "answer": "Se",
+      "zh": "他們的名字是湯姆和肯。",
+      "why": "Se llaman 是「他們叫做」，這個 se 是代名詞，不加重音。",
+      "tatoeba": 637573
+    },
+    {
+      "id": "u01-te-cafe",
+      "type": "choice",
+      "es": "¿Café o ___?",
+      "options": [
+        "té",
+        "te"
+      ],
+      "answer": "té",
+      "zh": "咖啡還是茶？",
+      "why": "「茶」是 té（有重音）；沒重音的 te 是「你」（te quiero 的 te）。",
+      "tatoeba": 1080180
+    },
+    {
+      "id": "u01-que-creo",
+      "type": "choice",
+      "es": "Creo ___ eres tú.",
+      "options": [
+        "que",
+        "qué"
+      ],
+      "answer": "que",
+      "zh": "我覺得是你。",
+      "why": "Creo que… 的 que 是連接詞（我覺得…），不是疑問，不加重音。",
+      "tatoeba": 969586
+    },
+    {
+      "id": "u01-donde",
+      "type": "choice",
+      "es": "¿___ está Jim?",
+      "options": [
+        "Dónde",
+        "Donde"
+      ],
+      "answer": "Dónde",
+      "zh": "吉姆在哪？",
+      "why": "疑問詞（哪裡）一定要加重音：¿Dónde…?",
+      "tatoeba": 644858
+    },
+    {
+      "id": "u01-inverted-q",
+      "type": "choice",
+      "es": "___ te llamas?",
+      "options": [
+        "¿Cómo",
+        "Cómo"
+      ],
+      "answer": "¿Cómo",
+      "zh": "你叫什麼名字？",
+      "why": "問句開頭要加倒過來的問號 ¿，句尾也要有問號；疑問詞 Cómo 也有重音。",
+      "tatoeba": 449153
+    },
+    {
+      "id": "u01-estacion",
+      "type": "choice",
+      "es": "¿Es esta la ___ de tren?",
+      "options": [
+        "estación",
+        "estacion"
+      ],
+      "answer": "estación",
+      "zh": "這就是車站嗎？",
+      "why": "字尾是 n，照規則重音在倒數第二音節；但這個字重音在最後一個音節，所以要寫 ó。",
+      "tatoeba": 10193478
+    },
+    {
+      "id": "u01-lapiz",
+      "type": "choice",
+      "es": "Esto es un ___.",
+      "options": [
+        "lápiz",
+        "lapiz"
+      ],
+      "answer": "lápiz",
+      "zh": "這是一支鉛筆。",
+      "why": "字尾是 z（不是母音、n、s），照規則重音在最後；lápiz 的重音在前面，所以要寫 á。",
+      "tatoeba": 345302
+    },
+    {
+      "id": "u01-manana",
+      "type": "choice",
+      "es": "Hasta ___.",
+      "options": [
+        "mañana",
+        "manana"
+      ],
+      "answer": "mañana",
+      "zh": "明天見。",
+      "why": "ñ 是獨立的字母，念成快速的「ni」；少了波浪線就不是同一個字。",
+      "tatoeba": 497587
+    },
+    {
+      "id": "u01-hermano",
+      "type": "choice",
+      "es": "Tengo un ___.",
+      "options": [
+        "hermano",
+        "ermano"
+      ],
+      "answer": "hermano",
+      "zh": "我有一個哥哥或弟弟。",
+      "why": "h 不發音，但拼字一定要寫，所以聽起來像 ermano，寫出來是 hermano。",
+      "tatoeba": 508421,
+      "zhSrc": "ai"
+    },
+    {
+      "id": "u01-fill-que",
+      "type": "fill",
+      "es": "¿___ es esto?",
+      "hint": "疑問詞「什麼」",
+      "answer": [
+        "Qué"
+      ],
+      "zh": "這是什麼啊？",
+      "why": "「什麼」是疑問詞，要寫 Qué（é 有重音）。",
+      "tatoeba": 449942
+    },
+    {
+      "id": "u01-fill-cuanto",
+      "type": "fill",
+      "es": "¿___ cuesta?",
+      "hint": "疑問詞「多少」",
+      "answer": [
+        "Cuánto"
+      ],
+      "zh": "這個多少？",
+      "why": "疑問詞「多少」要寫 Cuánto（a 上有重音）。",
+      "tatoeba": 436194
+    },
+    {
+      "id": "u01-order-cuanto",
+      "type": "order",
+      "tokens": [
+        "¿Cuánto",
+        "cuesta",
+        "esto?"
+      ],
+      "alt": [],
+      "zh": "這東西多少錢？",
+      "why": "疑問句前後都要有問號，疑問詞排最前面：¿Cuánto cuesta esto?",
+      "tatoeba": 436200
+    }
+  ]
+}
